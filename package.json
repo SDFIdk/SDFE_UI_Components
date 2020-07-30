@@ -4,6 +4,8 @@
   "description": "UI library for CSS and Vue components, published as npm packages for use across projects",
   "main": "src/index.js",
   "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Kortforsyningen/SDFE_UI_Components/issues"
   },
-  "homepage": "https://github.com/Kortforsyningen/SDFE_UI_Components#readme"
+  "homepage": "https://github.com/Kortforsyningen/SDFE_UI_Components#readme",
+  "devDependencies": {
+    "vuepress": "^1.5.2"
+  }
 }

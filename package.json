@@ -1,16 +1,21 @@
 {
-  "name": "@kortforsyningen/sdfe-ui-components",
+  "name": "@dataforsyningen/sdfe-ui-components",
   "version": "0.0.1",
   "description": "UI library for CSS and Vue components, published as npm packages for use across projects",
   "main": "src/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "build": "vue-cli-service build --target lib --name ui src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kortforsyningen/SDFE_UI_Components.git"
+    "url": "git+https://github.com/dataforsyningen/SDFE_UI_Components.git"
   },
   "keywords": [
     "ui",
@@ -18,13 +23,14 @@
     "vue",
     "css"
   ],
-  "author": "Kortforsyningen",
+  "author": "Dataforsyningen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kortforsyningen/SDFE_UI_Components/issues"
+    "url": "https://github.com/dataforsyningen/SDFE_UI_Components/issues"
   },
-  "homepage": "https://github.com/Kortforsyningen/SDFE_UI_Components#readme",
+  "homepage": "https://github.com/dataforsyningen/SDFE_UI_Components#readme",
   "devDependencies": {
-    "vuepress": "^1.5.2"
+    "@vue/cli": "4.4.6",
+    "vuepress": "1.5.2"
   }
 }

@@ -1,0 +1,3 @@
+<template>
+  <UiTest />
+</template>

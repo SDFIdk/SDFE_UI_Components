@@ -1,5 +1,9 @@
 'use strict';
 
-export default function () {
-  return true;
-}
+import UiTest from './components/UiTest';
+
+export default {
+  install(Vue, options) {
+    Vue.use(UiTest);
+  }
+};

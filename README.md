@@ -3,16 +3,38 @@ UI library for CSS and Vue components, published as npm packages for use across 
 
 ## Usage guide
 
-*TEMPORARY INSTALL GUIDE* This module will be hosted as npm package in the future, but usage will be the same.
+Add or update your local `.npmrc`
 
 ```
-npm install git+https://github.com/Kortforsyningen/SDFE_UI_Components.git --save
+@dataforsyningen:registry=https://npm.pkg.github.com/dataforsyningen
+save-exact=true
+```
+
+Then install package as dependency
+```
+npm install @dataforsyningen/sdfe-ui-components --save
 ```
 
 ## Development
 
-Clone repo and `npm install`. Then run the local docs site with `npm run docs:dev`.
+Clone repo and `npm install`. Then run the local docs site with 
+
+```
+npm run docs:dev
+```
 
 ## Publish new version
 
-TBD (awaiting package hosting)
+Install vue-cli for compiling library
+
+```
+npm i vue-cli -g
+```
+
+Then compile library to dist folder
+
+```
+npm run build
+```
+
+> TBD (awaiting package hosting)

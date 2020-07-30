@@ -1,0 +1,25 @@
+{
+  "name": "@kortforsyningen/sdfe-ui-components",
+  "version": "0.0.1",
+  "description": "UI library for CSS and Vue components, published as npm packages for use across projects",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kortforsyningen/SDFE_UI_Components.git"
+  },
+  "keywords": [
+    "ui",
+    "components",
+    "vue",
+    "css"
+  ],
+  "author": "Kortforsyningen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kortforsyningen/SDFE_UI_Components/issues"
+  },
+  "homepage": "https://github.com/Kortforsyningen/SDFE_UI_Components#readme"
+}

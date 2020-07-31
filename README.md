@@ -42,11 +42,11 @@ npm run build
 
 3. Bump version and release tag on Github
 ```
-np patch --no-publish --no-cleanup
+np patch
 ```
-> The `--no-publish` flag is set to let npm do the publishing. The `--no-cleanup` flag avoids re-installing `node_modules`. 
+> Check np settings in [.np-config.json](./.np-config.json)
 
-> To release minor version instead of patch, write `np minor --no-publish --no-cleanup`. See [np documentation](https://www.npmjs.com/package/np).
+> To release minor version instead of patch, write `np minor`. See [np documentation](https://www.npmjs.com/package/np).
 
 4. Publish npm package
 ```

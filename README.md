@@ -5,13 +5,13 @@ UI library for CSS and Vue components, published as npm packages for use across 
 
 Add or update your local `.npmrc`
 
-```
+```bash
 @dataforsyningen:registry=https://npm.pkg.github.com/dataforsyningen
 save-exact=true
 ```
 
 Then install package as dependency
-```
+```bash
 npm install @dataforsyningen/sdfe-ui-components --save
 ```
 
@@ -26,7 +26,7 @@ npm install @dataforsyningen/sdfe-ui-components --save
 2. Add your personal access token to your `~/.npmrc` file. (See [Configuring npm for use with GitHub Packages](https://docs.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages))
 
 Replace TOKEN with your personal access token. Create a new ~/.npmrc file if one doesn't exist. 
-```
+```bash
 //npm.pkg.github.com/:_authToken=TOKEN
 ```
 
@@ -34,7 +34,7 @@ Replace TOKEN with your personal access token. Create a new ~/.npmrc file if one
 
 Clone repo and `npm install`. Then run the local docs site with 
 
-```
+```bash
 npm run docs:dev
 ```
 
@@ -54,18 +54,18 @@ npm run docs:dev
 ### Publish new package version
 
 1. Install [np](https://www.npmjs.com/package/np) package publisher 
-```
+```bash
 npm install np -g
 ```
 
 2. Compile library to dist folder
-```
-npm install
+```bash
+npm install # "npm ci" on CI tool
 npm run build
 ```
 
 3. Bump version and release tag on Github
-```
+```bash
 np patch
 ```
 > Check np settings in [.np-config.json](./.np-config.json)
@@ -73,6 +73,6 @@ np patch
 > To release minor version instead of patch, write `np minor`. See [np documentation](https://www.npmjs.com/package/np).
 
 4. Publish npm package
-```
+```bash
 npm publish
 ```

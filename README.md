@@ -29,12 +29,18 @@ npm run docs:dev
 
 ## Publish new version
 
+Install [np](https://www.npmjs.com/package/np) package publisher 
+
+```
+npm install np -g
+```
+
 Compile library to dist folder
 
 ```
 npm run build
-npm version patch
+np patch
 npm publish
 ```
 
-> To release minor version instead of patch, write `npm version minor`
+> To release minor version instead of patch, write `np minor`

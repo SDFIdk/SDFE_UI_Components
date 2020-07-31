@@ -17,6 +17,9 @@
     "type": "git",
     "url": "git+https://github.com/dataforsyningen/SDFE_UI_Components.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/dataforsyningen"
+  },
   "keywords": [
     "ui",
     "components",

@@ -38,9 +38,12 @@ npm install np -g
 Compile library to dist folder
 
 ```
+npm install
 npm run build
-np patch
+np patch --no-publish --no-cleanup
 npm publish
 ```
 
-> To release minor version instead of patch, write `np minor`
+> The `--no-publish` flag is set to let npm do the publishing. The `--no-cleanup` flag avoids re-installing `node_modules`. 
+
+> To release minor version instead of patch, write `np minor --no-publish --no-cleanup` as the 3rd command. See [np documentation](https://www.npmjs.com/package/np).

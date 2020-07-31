@@ -10,7 +10,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "build": "vue-cli-service build --target lib --name ui src/index.js",
+    "build": "vue-cli-service build --target lib --name ui-components src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,6 +31,7 @@
   "homepage": "https://github.com/dataforsyningen/SDFE_UI_Components#readme",
   "devDependencies": {
     "@vue/cli": "4.4.6",
+    "@vue/cli-service": "4.4.6",
     "vuepress": "1.5.2"
   }
 }

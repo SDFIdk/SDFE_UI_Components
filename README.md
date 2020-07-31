@@ -29,21 +29,26 @@ npm run docs:dev
 
 ## Publish new version
 
-Install [np](https://www.npmjs.com/package/np) package publisher 
-
+1. Install [np](https://www.npmjs.com/package/np) package publisher 
 ```
 npm install np -g
 ```
 
-Compile library to dist folder
-
+2. Compile library to dist folder
 ```
 npm install
 npm run build
-np patch --no-publish --no-cleanup
-npm publish
 ```
 
+3. Bump version and release tag on Github
+```
+np patch --no-publish --no-cleanup
+```
 > The `--no-publish` flag is set to let npm do the publishing. The `--no-cleanup` flag avoids re-installing `node_modules`. 
 
-> To release minor version instead of patch, write `np minor --no-publish --no-cleanup` as the 3rd command. See [np documentation](https://www.npmjs.com/package/np).
+> To release minor version instead of patch, write `np minor --no-publish --no-cleanup`. See [np documentation](https://www.npmjs.com/package/np).
+
+4. Publish npm package
+```
+npm publish
+```

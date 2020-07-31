@@ -2,7 +2,7 @@
   "name": "@dataforsyningen/sdfe-ui-components",
   "version": "0.0.5",
   "description": "UI library for CSS and Vue components, published as npm packages for use across projects",
-  "main": "src/index.js",
+  "main": "src/vue/index.js",
   "files": [
     "src",
     "dist"
@@ -10,7 +10,8 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "build": "vue-cli-service build --target lib --name ui-components src/index.js",
+    "build": "vue-cli-service build --target lib --name ui-components src/vue/index.js",
+    "build-styl": "webpack",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "repository": {
@@ -32,6 +33,11 @@
   "devDependencies": {
     "@vue/cli": "4.4.6",
     "@vue/cli-service": "4.4.6",
-    "vuepress": "1.5.2"
+    "copy-webpack-plugin": "6.0.3",
+    "vue-cli-plugin-style-resources-loader": "0.1.4",
+    "vuepress": "1.5.2",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-merge": "5.0.9"
   }
 }

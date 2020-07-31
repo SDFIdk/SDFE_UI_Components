@@ -1,6 +1,6 @@
 'use strict';
 
-import Ui from '../../src'
+import UiComponents from '../../src'
 
 // async function is also supported, too
 export default ({
@@ -12,5 +12,5 @@ export default ({
 }) => {
   // ...apply enhancements to the app
 
-  Vue.use(Ui);
+  Vue.use(UiComponents);
 }

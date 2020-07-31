@@ -1,6 +1,10 @@
 # SDFE_UI_Components
 UI library for CSS and Vue components, published as npm packages for use across projects
 
+## Authenticate
+
+TBD;
+
 ## Usage guide
 
 Add or update your local `.npmrc`
@@ -25,16 +29,12 @@ npm run docs:dev
 
 ## Publish new version
 
-Install vue-cli for compiling library
-
-```
-npm i vue-cli -g
-```
-
-Then compile library to dist folder
+Compile library to dist folder
 
 ```
 npm run build
+npm version patch
+npm publish
 ```
 
-> TBD (awaiting package hosting)
+> To release minor version instead of patch, write `npm version minor`

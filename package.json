@@ -34,6 +34,8 @@
     "@vue/cli": "4.4.6",
     "@vue/cli-service": "4.4.6",
     "copy-webpack-plugin": "6.0.3",
+    "stylus": "0.54.8",
+    "stylus-loader": "3.0.2",
     "vue-cli-plugin-style-resources-loader": "0.1.4",
     "vuepress": "1.5.2",
     "webpack": "4.44.1",

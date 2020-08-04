@@ -13,7 +13,7 @@
     "build": "vue-cli-service build --target lib --name ui-components src/vue/index.js",
     "build-styl": "webpack --mode development",
     "test": "echo \"Warning: no test specified\" && exit 0",
-    "release": "np"
+    "version": "np"
   },
   "repository": {
     "type": "git",

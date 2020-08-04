@@ -58,26 +58,21 @@ npm run docs:dev
 
 ### Publish new package version
 
-1. Install [np](https://www.npmjs.com/package/np) package publisher 
-```bash
-npm install np -g
-```
-
-2. Compile library to dist folder
+1. Compile library to dist folder
 ```bash
 npm install # "npm ci" on CI tool
 npm run build
 ```
 
-3. Bump version and release tag on Github
+2. Bump version and release tag on Github
 ```bash
-np patch
+npm run version
 ```
 > Check np settings in [.np-config.json](./.np-config.json)
 
 > To release minor version instead of patch, write `np minor`. See [np documentation](https://www.npmjs.com/package/np).
 
-4. Publish npm package
+3. Publish npm package to [npm.pkg.github.com](https://github.com/dataforsyningen/SDFE_UI_Components/packages/336305)
 ```bash
 npm publish
 ```

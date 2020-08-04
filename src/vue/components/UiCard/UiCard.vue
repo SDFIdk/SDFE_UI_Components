@@ -1,9 +1,15 @@
 <template>
-  <div>Test Component</div>
+  <div class="ui-card">
+    <div class="ui-card__wrapper">
+      <slot name="header" />
+      <slot />
+      <slot name="footer" />
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'UiTest'
+  name: 'UiCard'
 }
 </script>

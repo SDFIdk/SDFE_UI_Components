@@ -12,7 +12,8 @@
     "docs:build": "vuepress build docs",
     "build": "vue-cli-service build --target lib --name ui-components src/vue/index.js",
     "build-styl": "webpack --mode development",
-    "test": "echo \"Warning: no test specified\" && exit 0"
+    "test": "echo \"Warning: no test specified\" && exit 0",
+    "release": "np"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "@vue/cli": "4.4.6",
     "@vue/cli-service": "4.4.6",
     "copy-webpack-plugin": "6.0.3",
+    "np": "6.3.2",
     "stylus": "0.54.8",
     "stylus-loader": "3.0.2",
     "vuepress": "1.5.2"

@@ -11,5 +11,14 @@ module.exports = {
       '/icons/',
       '/components/'
     ]
-  }
+  },
+  plugins: [
+    [
+      // Register components globally for use in markdown
+      'register-components',
+      {
+        componentsDir: '../../src/vue'
+      }
+    ]
+  ]
 }

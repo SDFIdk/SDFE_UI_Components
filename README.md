@@ -66,11 +66,12 @@ npm run build
 
 2. Bump version and release tag on Github
 ```bash
-npm run version
+npm run version -- patch
+# similar to `np patch` command
 ```
 > Check np settings in [.np-config.json](./.np-config.json)
 
-> To release minor version instead of patch, write `np minor`. See [np documentation](https://www.npmjs.com/package/np).
+> To release minor version instead of patch, write `npm run version -- minor`. See [np documentation](https://www.npmjs.com/package/np).
 
 3. Publish npm package to [npm.pkg.github.com](https://github.com/dataforsyningen/SDFE_UI_Components/packages/336305)
 ```bash

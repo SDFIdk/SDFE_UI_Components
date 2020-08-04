@@ -39,5 +39,8 @@
     "stylus": "0.54.8",
     "stylus-loader": "3.0.2",
     "vuepress": "1.5.2"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.1"
   }
 }

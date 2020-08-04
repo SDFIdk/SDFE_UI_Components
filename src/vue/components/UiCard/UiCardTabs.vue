@@ -6,6 +6,17 @@
 
 <script>
 export default {
-  name: 'UiCardTabs'
+  name: 'UiCardTabs',
+  data() {
+    return {
+      tabs: []
+    }
+  },
+  created() {
+    // We wrap this in a `$nextTick()` to ensure the child tabs have been created
+    this.$nextTick(() => {
+      this.tabs = this.$children.filter(t=>t._isTab);
+    });
+  }
 }
 </script>

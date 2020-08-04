@@ -6,6 +6,12 @@
 
 <script>
 export default {
-  name: 'UiCardTab'
+  name: 'UiCardTab',
+  computed: {
+    _isTab() {
+      // For parent sniffing of child
+      return true
+    }
+  }
 }
 </script>

@@ -23,12 +23,17 @@ npm install @dataforsyningen/sdfe-ui-components --save
 1. Create a [Github access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) with access to packages: 
 ![Capture](https://user-images.githubusercontent.com/391833/89022056-b444a300-d321-11ea-89c2-7c114f9b07bb.PNG)
 
-2. Add your personal access token to your `~/.npmrc` file. (See [Configuring npm for use with GitHub Packages](https://docs.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages))
+2. Authenticate by logging in to npm with your personal access token. This will add the token to your `~/.npmrc` file. (See [Configuring npm for use with GitHub Packages](https://docs.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages))
 
-Replace TOKEN with your personal access token. Create a new ~/.npmrc file if one doesn't exist. 
 ```bash
-//npm.pkg.github.com/:_authToken=TOKEN
+npm login --registry=https://npm.pkg.github.com
+
+> Username: USERNAME
+> Password: TOKEN
+> Email: PUBLIC-EMAIL-ADDRESS
 ```
+
+> Check `~/.npmrc` for the new token
 
 ### Run local docs site
 

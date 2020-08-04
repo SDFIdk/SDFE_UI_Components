@@ -1,26 +1,13 @@
-//const CopyPlugin = require('copy-webpack-plugin');
-const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  /*
   configureWebpack: {
     plugins: [
       new CopyPlugin({
         patterns: [
-          { 
-            from: './src/styl/main.styl', 
-            to: '/'
-          }
+          { from: 'src/assets/icons', to: 'assets/icons' },
         ],
-      }),
+      })
     ]
-  },*/
-  pluginOptions: {
-    'style-resources-loader': {
-      'preProcessor': 'stylus',
-      'patterns': [
-        path.resolve(__dirname, './src/styl/*.styl')
-      ]
-    }
   }
 }

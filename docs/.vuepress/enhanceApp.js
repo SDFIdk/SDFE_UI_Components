@@ -1,7 +1,7 @@
 'use strict';
 
 import UiComponents from '../../src/vue';
-import '../../src/styl/main.styl';
+import './docs.styl';
 
 // async function is also supported, too
 export default ({

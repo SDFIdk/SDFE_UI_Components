@@ -35,6 +35,14 @@ export default {
   },
   created() {
     this.isActive = this.active;
+  },
+  watch: {
+    isActive(val) {
+      if (val) {
+        // Emit event when tab is selected
+        this.$emit('onSelect');
+      }
+    }
   }
 }
 </script>

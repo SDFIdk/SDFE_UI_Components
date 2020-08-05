@@ -4,6 +4,7 @@
 
 ### Default
 
+<div class="custom"> 
 <UiCard>
   <UiCardBody>
   <h1>Card header</h1>
@@ -11,44 +12,63 @@
   </UiCardBody>
   <UiCardFooter>Card footer with <a href="#">link</a>.</UiCardFooter>
 </UiCard>
+</div>
+
+
+```html
+<UiCard>
+  <UiCardBody>
+    <h1>Card header</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </UiCardBody>
+  <UiCardFooter>Card footer with <a href="#">link</a>.</UiCardFooter>
+</UiCard>
+```
+
 
 ### Card with tabs
 
+<div class="custom"> 
 <UiCard>
   <UiCardTabs>
   <UiCardTab active title="Tab 1">
   <UiCardBody>
-  <p>Tab content 1</p>
+  <p>Lorem ipsum dolor sit amet</p>
   </UiCardBody>
   </UiCardTab>
   <UiCardTab title="Tab 2">
   <UiCardBody>
-  <p>Tab content 2</p>
+  <p>Consectetur adipiscing elit</p>
   </UiCardBody>
   </UiCardTab>
   <UiCardTab title="Tab 3">
   <UiCardBody>
-  <p>Tab content 3</p>
+  <p>Integer malesuada nulla leo</p>
   </UiCardBody>
   </UiCardTab>
   </UiCardTabs>
-  <UiCardBody>
-    <p>test</p>
-  </UiCardBody>
-  <UiCardFooter>Card footer</UiCardFooter>
 </UiCard>
+</div>
 
 ```html
 <UiCard>
   <UiCardTabs>
-    <UiCardTab class="selected">Tab 1</UiCardTab>
-    <UiCardTab>Tab 2</UiCardTab>
-    <UiCardTab>Tab 3</UiCardTab>
+    <UiCardTab active title="Tab 1">
+      <UiCardBody>
+      <p>Lorem ipsum dolor sit amet</p>
+      </UiCardBody>
+    </UiCardTab>
+    <UiCardTab title="Tab 2">
+      <UiCardBody>
+      <p>Consectetur adipiscing elit</p>
+      </UiCardBody>
+    </UiCardTab>
+    <UiCardTab title="Tab 3">
+      <UiCardBody>
+      <p>Integer malesuada nulla leo</p>
+      </UiCardBody>
+    </UiCardTab>
   </UiCardTabs>
-  <UiCardBody>
-    <p>test</p>
-  </UiCardBody>
-  <UiCardFooter>Footer test</UiCardFooter>
 </UiCard>
 ```
 

@@ -1,41 +1,51 @@
 .ui-card
-  border: 5px solid rgba(#f5f5f5, 0.5)
-  border-radius: 14px
-  background: #fff;
-  min-width: 300px
+  border $card-border-outer
+  border-radius 14px
+  background $card-bg
+  min-width 300px
+
+  h1 
+    font-size $card-heading-size
 
 .ui-card__wrapper
-  border: 1px solid #c3c3c3
-  border-radius: 9px
-  overflow: hidden
+  border $card-border
+  border-radius 9px
+  overflow hidden
 
 .ui-card__body
-  padding: 10px 15px
+  padding 10px 15px
 
 .ui-card__footer 
-  background-color: #f2f2f2
-  padding: 10px 15px
+  background-color $card-bg-secondary
+  border-top $card-border
+  padding 10px 15px
 
-.ui-card__tabs
-  display: flex
+.ui-card__tabs-nav
+  display flex
 
-.ui-card__tab
+.ui-card__tabs-btn
   button-reset()
-  flex: 1
-  font-weight: 700
-  background-color: #f2f2f2
-  border-left: 1px #c3c3c3 solid
-  border-bottom: 1px #c3c3c3 solid
-  height: 40px
-  padding: 10px
-  color: #333
-  cursor: pointer
-  box-sizing: border-box
+  flex 1
+  font-weight 700
+  background-color $card-bg-secondary
+  border-left $card-border
+  border-bottom $card-border
+  height 40px
+  padding 10px
+  color $text-body
+  cursor pointer
+  box-sizing border-box
 
   &:first-child 
     border-left none
 
-  &.selected
-    background-color: #fff
-    border-bottom-color: #fff
-    color: #0097a7
+  &.is-active
+    background-color $card-bg;
+    border-bottom-color $card-bg;
+    color $link-color
+
+.ui-card__tab-content
+  display none
+
+  &.is-active 
+    display block

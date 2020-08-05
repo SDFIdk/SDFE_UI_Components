@@ -1,17 +1,40 @@
 <template>
-  <button class="ui-card__tab">
+  <div
+    :class="{ 'is-active': isActive }" 
+    class="ui-card__tab-content"
+    >
     <slot />
-  </button>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'UiCardTab',
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    active: {
+      type: Boolean,
+      default() {
+        return false
+      }
+    }
+  },
+  data() {
+    return {
+      isActive: false
+    }
+  },
   computed: {
     _isTab() {
       // For parent sniffing of child
       return true
     }
+  },
+  created() {
+    this.isActive = this.active;
   }
 }
 </script>

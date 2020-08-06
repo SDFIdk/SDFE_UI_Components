@@ -23,6 +23,11 @@ import '@dataforsyningen/sdfe-ui-components/dist/ui-components.css';
 Vue.use(SDFEUIComponents);
 ```
 
+Update to latest version
+```bash
+npm install @dataforsyningen/sdfe-ui-components@latest --save
+```
+
 ## Develop new features in this repo
 
 ### Authenticate

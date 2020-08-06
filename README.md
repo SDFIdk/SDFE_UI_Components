@@ -10,9 +10,17 @@ Add or update your local `.npmrc`
 save-exact=true
 ```
 
-Then install package as dependency
+Install package as dependency
 ```bash
 npm install @dataforsyningen/sdfe-ui-components --save
+```
+
+Install components and styles in your app
+```js
+import SDFEUIComponents from '@dataforsyningen/sdfe-ui-components';
+import '@dataforsyningen/sdfe-ui-components/dist/ui-components.css';
+
+Vue.use(SDFEUIComponents);
 ```
 
 ## Develop new features in this repo

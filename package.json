@@ -1,6 +1,6 @@
 {
   "name": "@dataforsyningen/sdfe-ui-components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "UI library for CSS and Vue components, published as npm packages for use across projects",
   "main": "src/vue/index.js",
   "files": [

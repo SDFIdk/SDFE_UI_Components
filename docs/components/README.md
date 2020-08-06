@@ -4,7 +4,7 @@
 
 ### Default
 
-<div class="custom"> 
+<div class="custom example-pattern"> 
 <UiCard>
   <UiCardBody>
   <h1>Card header</h1>
@@ -28,7 +28,7 @@
 
 ### Card with tabs
 
-<div class="custom"> 
+<div class="custom example-pattern"> 
 <UiCard>
   <UiCardTabs>
   <UiCardTab active title="Tab 1">

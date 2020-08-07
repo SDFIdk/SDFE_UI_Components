@@ -1,0 +1,45 @@
+.ui-tabs__header
+  padding-right: $tabs-border-radius // prevent tabs to overflow rounded border
+  margin-bottom: -1px
+  
+.ui-tabs__body
+  padding 10px 15px
+  border $tabs-border
+  border-radius $tabs-border-radius
+  border-top-left-radius 0
+
+.ui-tabs__nav
+  clearfix()
+  display inline-flex
+  overflow hidden
+  background-color $tabs-bg-secondary
+  border-left $tabs-border
+  border-top $tabs-border
+  border-right $tabs-border
+  border-top-left-radius $tabs-border-radius
+  border-top-right-radius $tabs-border-radius
+
+.ui-tabs__btn
+  button-reset()
+  font-weight 700
+  border-left $tabs-border
+  border-bottom $tabs-border
+  height 40px
+  padding 10px
+  color $text-body
+  cursor pointer
+  box-sizing border-box
+
+  &:first-child 
+    border-left none
+
+  &.is-active
+    background-color $tabs-bg;
+    border-bottom-color $tabs-bg;
+    color $link-color
+
+.ui-tabs__item
+  display none
+
+  &.is-active 
+    display block

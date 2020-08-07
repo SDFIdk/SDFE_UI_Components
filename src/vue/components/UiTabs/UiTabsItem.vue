@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ 'is-active': isActive }" 
-    class="ui-card__tab-content"
+    class="ui-tabs__item"
     >
     <slot />
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'UiCardTab',
+  name: 'UiTabsItem',
   props: {
     title: {
       type: String,

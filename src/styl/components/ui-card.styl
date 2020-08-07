@@ -1,14 +1,13 @@
 .ui-card
   border $card-border-outer
-  border-radius 14px
-  min-width 300px
+  border-radius $card-border-outer-radius
 
   h1 
     font-size $card-heading-size
 
-.ui-card__wrapper
+.ui-card__inner
   border $card-border
-  border-radius 9px
+  border-radius $card-border-radius
   background $card-bg
   overflow hidden
 
@@ -20,32 +19,27 @@
   border-top $card-border
   padding 10px 15px
 
-.ui-card__tabs-nav
-  display flex
+// 
+// Tabs component as nested card content
+// 
 
-.ui-card__tabs-btn
-  button-reset()
-  flex 1
-  font-weight 700
-  background-color $card-bg-secondary
-  border-left $card-border
-  border-bottom $card-border
-  height 40px
-  padding 10px
-  color $text-body
-  cursor pointer
-  box-sizing border-box
+.ui-card__body > .ui-tabs
+  margin-bottom 5px
 
-  &:first-child 
-    border-left none
+// 
+// Tabs component as card navigation
+// 
 
-  &.is-active
-    background-color $card-bg;
-    border-bottom-color $card-bg;
-    color $link-color
+.ui-card__inner > .ui-tabs
+  .ui-tabs__header
+    padding 0
 
-.ui-card__tab-content
-  display none
+  .ui-tabs__nav 
+    display flex
+    border none
 
-  &.is-active 
-    display block
+  .ui-tabs__btn
+    flex 1
+
+  .ui-tabs__body 
+    border none

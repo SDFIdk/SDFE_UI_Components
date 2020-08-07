@@ -30,48 +30,104 @@
 
 <div class="custom example-pattern"> 
 <UiCard>
-  <UiCardTabs>
-  <UiCardTab active title="Tab 1">
-  <UiCardBody>
+  <UiTabs>
+  <UiTabsItem title="Tab 1">
   <p>Lorem ipsum dolor sit amet</p>
-  </UiCardBody>
-  </UiCardTab>
-  <UiCardTab title="Tab 2">
-  <UiCardBody>
+  </UiTabsItem>
+  <UiTabsItem active title="Tab 2">
   <p>Consectetur adipiscing elit</p>
-  </UiCardBody>
-  </UiCardTab>
-  <UiCardTab title="Tab 3">
-  <UiCardBody>
+  </UiTabsItem>
+  <UiTabsItem title="Tab 3">
   <p>Integer malesuada nulla leo</p>
-  </UiCardBody>
-  </UiCardTab>
-  </UiCardTabs>
+  </UiTabsItem>
+  </UiTabs>
 </UiCard>
 </div>
 
 ```html
 <UiCard>
-  <UiCardTabs>
-    <UiCardTab active title="Tab 1">
-      <UiCardBody>
+  <UiTabs>
+    <UiTabsItem title="Tab 1">
       <p>Lorem ipsum dolor sit amet</p>
-      </UiCardBody>
-    </UiCardTab>
-    <UiCardTab title="Tab 2">
-      <UiCardBody>
+    </UiTabsItem>
+    <UiTabsItem active title="Tab 2">
       <p>Consectetur adipiscing elit</p>
-      </UiCardBody>
-    </UiCardTab>
-    <UiCardTab title="Tab 3">
-      <UiCardBody>
+    </UiTabsItem>
+    <UiTabsItem title="Tab 3">
       <p>Integer malesuada nulla leo</p>
-      </UiCardBody>
-    </UiCardTab>
-  </UiCardTabs>
+    </UiTabsItem>
+  </UiTabs>
 </UiCard>
 ```
 
-## Component 2
+<div class="custom example-pattern"> 
+<UiCard>
+  <UiCardBody>
+  <h1>Card header</h1>
+  <UiTabs>
+  <UiTabsItem title="Tab 1">
+  <p>Lorem ipsum dolor sit amet</p>
+  </UiTabsItem>
+  <UiTabsItem title="Tab 2">
+  <p>Consectetur adipiscing elit</p>
+  </UiTabsItem>
+  <UiTabsItem title="Tab 3">
+  <p>Integer malesuada nulla leo</p>
+  </UiTabsItem>
+  </UiTabs>
+  </UiCardBody>
+</UiCard>
+</div>
+
+```html
+<UiCard>
+  <UiCardBody>
+    <h1>Card header</h1>
+    <UiTabs>
+      <UiTabsItem active title="Tab 1">
+        <p>Lorem ipsum dolor sit amet</p>
+      </UiTabsItem>
+      <UiTabsItem title="Tab 2">
+        <p>Consectetur adipiscing elit</p>
+      </UiTabsItem>
+      <UiTabsItem title="Tab 3">
+        <p>Integer malesuada nulla leo</p>
+      </UiTabsItem>
+    </UiTabs>
+  </UiCardBody>
+</UiCard>
+```
+
+## Tabs
+<div class="custom"> 
+  
+<UiTabs>
+  <UiTabsItem title="Tab 1">
+  <p>Lorem ipsum dolor sit amet</p>
+  </UiTabsItem>
+  <UiTabsItem active title="Tab 2">
+  <p>Consectetur adipiscing elit</p>
+  </UiTabsItem>
+  <UiTabsItem title="Tab 3">
+  <p>Integer malesuada nulla leo</p>
+  </UiTabsItem>
+</UiTabs>
+</div>
+
+
+```html
+<UiTabs>
+  <UiTabsItem title="Tab 1">
+    <p>Lorem ipsum dolor sit amet</p>
+  </UiTabsItem>
+  <UiTabsItem active title="Tab 2">
+    <p>Consectetur adipiscing elit</p>
+  </UiTabsItem>
+  <UiTabsItem title="Tab 3">
+    <p>Integer malesuada nulla leo</p>
+  </UiTabsItem>
+</UiTabs>
+```
+
 
 ## Component 3

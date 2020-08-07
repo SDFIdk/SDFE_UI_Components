@@ -4,6 +4,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/guide/' },
       { text: 'Github', link: 'https://github.com/Kortforsyningen/SDFE_UI_Components' }
     ],
     sidebar: [

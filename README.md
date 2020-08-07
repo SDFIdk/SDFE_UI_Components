@@ -23,6 +23,11 @@ import '@dataforsyningen/sdfe-ui-components/dist/ui-components.css';
 Vue.use(SDFEUIComponents);
 ```
 
+Update to latest version
+```bash
+npm install @dataforsyningen/sdfe-ui-components@latest --save
+```
+
 ## Develop new features in this repo
 
 ### Authenticate
@@ -55,14 +60,7 @@ npm run docs:dev
 
 1. Create component files in `src/components/`
 2. Register component in `src/index.js`
-3. Add component in `docs/.vuepress/components/` with the same name (this registers the component for use in markdown, see [Using Components](https://vuepress.vuejs.org/guide/using-vue.html#using-components))
-```bash
-# docs/.vuepress/components/UiTest.vue
-<template>
-  <UiTest />
-</template>
-```
-4. Write documentation with example in `docs/components/README.md`
+3. Write documentation with example in `docs/components/README.md`
 
 ### Publish new package version
 

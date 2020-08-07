@@ -88,6 +88,34 @@
 </UiCard>
 ```
 
+### Card with accordion
+
+<div class="custom example-pattern"> 
+<UiCard>
+<UiAccordion>
+  <UiAccordionItem title="Tab 1">Lorem ipsum dolor sit amet</UiAccordionItem>
+  <UiAccordionItem active title="Tab 2">Consectetur adipiscing elit</UiAccordionItem>
+  <UiAccordionItem title="Tab 3">Integer malesuada nulla leo</UiAccordionItem>
+</UiAccordion>
+</UiCard>
+</div>
+
+```html
+<UiCard>
+  <UiAccordion>
+    <UiAccordionItem title="Tab 1">
+      Lorem ipsum dolor sit amet
+    </UiAccordionItem>
+    <UiAccordionItem active title="Tab 2">
+      Consectetur adipiscing elit
+    </UiAccordionItem>
+    <UiAccordionItem title="Tab 3">
+      Integer malesuada nulla leo
+    </UiAccordionItem>
+  </UiAccordion>
+</UiCard>
+```
+
 ## Tabs
 <div class="custom"> 
   

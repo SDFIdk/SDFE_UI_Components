@@ -1,0 +1,32 @@
+.ui-accordion
+  background-color $accordion-bg
+  border $accordion-border
+  border-radius $accordion-border-radius
+  overflow hidden
+
+.ui-accordion__btn
+  button-reset()
+  font-weight 700
+  display block
+  width 100%
+  text-align left 
+  border-top $accordion-border
+  height 40px
+  padding 10px
+  color $text-body
+  cursor pointer
+  background-color $accordion-bg-secondary
+
+  .ui-accordion__item:first-child > &
+    border-top none
+
+  .ui-accordion__item.is-active > &
+    background-color $accordion-bg;
+    color $link-color
+
+.ui-accordion__body
+  padding 0 10px 15px 10px
+  display none
+
+  .ui-accordion__item.is-active > &
+    display block

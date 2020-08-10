@@ -36,9 +36,8 @@ export default {
     }
   },
   computed: {
-    _isAccordionItem() {
-      // For parent sniffing of child
-      return true
+    id() {
+      return this.key || `UiAccordionItem_${ this._uid }`
     }
   },
   created() {
@@ -48,10 +47,13 @@ export default {
   },
   methods: {
     onSelect() {
-      this.$parent.$emit('onItemSelect', this);
+      // Internal event for selecting active item
+      this.$parent.$emit('onItemSelect', this.id);
+      // Emit event for use in implementation
+      this.$parent.$emit('onSelect', this.id);
     },
-    onItemSelect(item) {
-      this.isActive = (item === this);
+    onItemSelect(id) {
+      this.isActive = (id === this.id);
     }
   }
 }

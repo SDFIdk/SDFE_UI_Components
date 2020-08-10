@@ -31,6 +31,9 @@ export default {
     _isTab() {
       // For parent sniffing of child
       return true
+    },
+    id() {
+      return this.key || `UiTabsItem_${ this._uid }`
     }
   },
   created() {
@@ -40,7 +43,7 @@ export default {
     isActive(val) {
       if (val) {
         // Emit event when tab is selected
-        this.$emit('onSelect');
+        this.$emit('onSelect', this.id);
       }
     }
   }

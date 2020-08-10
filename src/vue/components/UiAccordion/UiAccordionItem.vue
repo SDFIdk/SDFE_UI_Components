@@ -37,7 +37,7 @@ export default {
   },
   computed: {
     id() {
-      return this.key || `UiAccordionItem_${ this._uid }`
+      return this.$vnode.key || `UiAccordionItem_${ this._uid }`
     }
   },
   created() {

@@ -33,7 +33,7 @@ export default {
       return true
     },
     id() {
-      return this.key || `UiTabsItem_${ this._uid }`
+      return this.$vnode.key || `UiTabsItem_${ this._uid }`
     }
   },
   created() {

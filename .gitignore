@@ -32,6 +32,7 @@ node_modules
 
 ### Compiled files ###
 dist/
+*.tgz
 
 ### Code ###
 # Visual Studio Code - https://code.visualstudio.com/

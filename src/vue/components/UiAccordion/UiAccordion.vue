@@ -1,11 +1,11 @@
 <template>
-  <div class="ui-card__header">
+  <div class="ui-accordion">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'UiCardHeader'
+  name: 'UiAccordion'
 }
 </script>

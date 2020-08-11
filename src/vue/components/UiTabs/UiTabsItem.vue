@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ 'is-active': isActive }" 
-    class="ui-card__tab-content"
+    class="ui-tabs__item"
     >
     <slot />
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'UiCardTab',
+  name: 'UiTabsItem',
   props: {
     title: {
       type: String,
@@ -31,6 +31,9 @@ export default {
     _isTab() {
       // For parent sniffing of child
       return true
+    },
+    id() {
+      return this.$vnode.key || `UiTabsItem_${ this._uid }`
     }
   },
   created() {
@@ -40,7 +43,7 @@ export default {
     isActive(val) {
       if (val) {
         // Emit event when tab is selected
-        this.$emit('onSelect');
+        this.$emit('onSelect', this.id);
       }
     }
   }

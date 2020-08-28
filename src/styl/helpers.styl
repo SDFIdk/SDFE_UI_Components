@@ -20,3 +20,36 @@ button-reset()
   -webkit-user-select none /* for button */
   -moz-user-select none
   -ms-user-select none
+
+ 
+
+strip-units($number)
+  unit($number, '')
+
+
+//
+// EM function
+// font-size: em(18px); // 1.8rem
+//
+em($px-value, $base-size = $font-size-base)
+  return unit(strip-units($px-value) / strip-units($base-size), 'em')
+
+
+//
+// REM function
+// font-size: rem(18px); // 1.8rem
+// margin: rem(10px 0 20px); // 1rem 0 2rem
+//
+// @function rem($px-value, $base-size: 10px) {
+//   $baseline-rem: strip-units($base-size);
+
+//   @if type-of( $px-value ) == "list" {
+//     $output: ();
+//     @each $value in $px-value {
+//       $output: append($output, rem( $value, $base-size ));
+//     }
+//     @return $output;
+//   } @else {
+//     @return strip-units($px-value) / $baseline-rem * 1rem;
+//   }
+// }

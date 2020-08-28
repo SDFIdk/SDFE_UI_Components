@@ -27,6 +27,13 @@ $small-border-radius = 4px
 $border = 1px $sdfe-border-color solid
 $transparent-background = rgba(245,245,245,0.5)
 
+// 
+// Settings
+// 
+
+// Class to apply to wrapping element, for scoping styles
+// Used on either <body>  or in the case of the docs, on the custom wrapping div
+$content-class ?= '.sdfe-ui'
 
 //
 // Colors
@@ -45,35 +52,42 @@ $heading-color = #000
 // Typography
 //  
 
+$font-family-base = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+$font-size-base = 16px
+
+$heading-weight = 500
+$heading-margin = 0.67em 0
+$heading-line-height = 1.2
+
 $h1-color = $heading-color
-$h1-weight = 500
+$h1-weight = $heading-weight
 $h1-size = 2.813rem
-$h1-line-height = 1.2
+$h1-line-height = $heading-line-height
 
 $h2-color = $heading-color
-$h2-weight = 500
+$h2-weight = $heading-weight
 $h2-size = 2.813rem
-$h2-line-height = 1.2
+$h2-line-height = $heading-line-height
 
 $h3-color = $text-body
-$h3-weight = 500
+$h3-weight = $heading-weight
 $h3-size = 2.813rem
-$h3-line-height = 1.2
+$h3-line-height = $heading-line-height
 
 $h4-color = $text-body
-$h4-weight = 500
+$h4-weight = $heading-weight
 $h4-size = 1rem
-$h4-line-height = 1.2
+$h4-line-height = $heading-line-height
 
 $h5-color = $text-body
-$h5-weight = 500
+$h5-weight = $heading-weight
 $h5-size = 2.813rem
-$h5-line-height = 1.2
+$h5-line-height = $heading-line-height
 
 $h6-color = $text-body
-$h6-weight = 500
+$h6-weight = $heading-weight
 $h6-size = 2.813rem
-$h6-line-height = 1.2
+$h6-line-height = $heading-line-height
 
 //
 // UI

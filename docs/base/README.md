@@ -1,5 +1,9 @@
 # Base styles
 
+## Colors
+
+TBD
+
 ## Typography
 
 <div class="custom"> 
@@ -21,4 +25,3 @@
 <h6>h6. Quizdetagerne spiste jordbær med fløde mens cirkusklovnen Walther spillede på xylofon</h6>
 <p>p. Quizdetagerne spiste jordbær med fløde mens cirkusklovnen Walther spillede på xylofon</p>
 ```
-## Colors

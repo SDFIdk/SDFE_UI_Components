@@ -3,13 +3,13 @@
 ## Base inputs
 
 <div class="custom"> 
-  <label for="example_1">Email address</label>
-  <input type="email" class="form-input" id="example_1" placeholder="name@example.com">
+  <label for="example_input_1">Email address</label>
+  <input type="email" class="form-input" id="example_input_1" placeholder="name@example.com">
 </div>
 
 <div class="custom"> 
-  <label for="exampleFormControlSelect1">Example select</label>
-  <select class="form-input" id="exampleFormControlSelect1">
+  <label for="example_input_2">Example select</label>
+  <select class="form-input" id="example_input_2">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -19,8 +19,8 @@
 </div>
 
 <div class="custom"> 
-  <label for="exampleFormControlSelect2">Example multiple select</label>
-  <select multiple class="form-input" id="exampleFormControlSelect2">
+  <label for="example_input_3">Example multiple select</label>
+  <select multiple class="form-input" id="example_input_3">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -30,18 +30,18 @@
 </div>
 
 <div class="custom"> 
-  <label for="exampleFormControlTextarea1">Example textarea</label>
-  <textarea class="form-input" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <label for="example_input_4">Example textarea</label>
+  <textarea class="form-input" id="example_input_4" rows="3"></textarea>
 </div>
 
 
 ```html
-<label for="example_1">Email address</label>
-<input type="email" class="form-input" id="example_1" placeholder="name@example.com">
+<label for="example_input_1">Email address</label>
+<input type="email" class="form-input" id="example_input_1" placeholder="name@example.com">
 ```
 ```html
-<label for="exampleFormControlSelect1">Example select</label>
-<select class="form-input" id="exampleFormControlSelect1">
+<label for="example_input_2">Example select</label>
+<select class="form-input" id="example_input_2">
   <option>1</option>
   <option>2</option>
   <option>3</option>
@@ -50,8 +50,8 @@
 </select>
 ```
 ```html
-<label for="exampleFormControlSelect2">Example multiple select</label>
-<select multiple class="form-input" id="exampleFormControlSelect2">
+<label for="example_input_3">Example multiple select</label>
+<select multiple class="form-input" id="example_input_3">
   <option>1</option>
   <option>2</option>
   <option>3</option>
@@ -60,34 +60,34 @@
 </select>
 ```
 ```html
-<label for="exampleFormControlTextarea1">Example textarea</label>
-<textarea class="form-input" id="exampleFormControlTextarea1" rows="3"></textarea>
+<label for="example_input_4">Example textarea</label>
+<textarea class="form-input" id="example_input_4" rows="3"></textarea>
 ```
 
 ## Range input
 
 <div class="custom"> 
-  <label for="formControlRange">Example Range input</label>
-  <input type="range" class="form-input--range" id="formControlRange">
+  <label for="example_input_5">Example Range input</label>
+  <input type="range" class="form-input--range" id="example_input_5">
 </div>
 
 ```html
-<label for="formControlRange">Example Range input</label>
-<input type="range" class="form-input--range" id="formControlRange">
+<label for="example_input_5">Example Range input</label>
+<input type="range" class="form-input--range" id="example_input_5">
 ```
 
 ## Checkboxes and radios
 
 <div class="custom"> 
   <div class="form-check">
-    <input class="form-check__input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check__label" for="defaultCheck1">
+    <input class="form-check__input" type="checkbox" value="" id="example_check_1">
+    <label class="form-check__label" for="example_check_1">
       Default checkbox
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check__input" type="checkbox" value="" id="defaultCheck2" disabled>
-    <label class="form-check__label" for="defaultCheck2">
+    <input class="form-check__input" type="checkbox" value="" id="example_check_2" disabled>
+    <label class="form-check__label" for="example_check_2">
       Disabled checkbox
     </label>
   </div>
@@ -95,14 +95,14 @@
 
 ```html
 <div class="form-check">
-  <input class="form-check__input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check__label" for="defaultCheck1">
+  <input class="form-check__input" type="checkbox" value="" id="example_check_1">
+  <label class="form-check__label" for="example_check_1">
     Default checkbox
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check__input" type="checkbox" value="" id="defaultCheck2" disabled>
-  <label class="form-check__label" for="defaultCheck2">
+  <input class="form-check__input" type="checkbox" value="" id="example_check_2" disabled>
+  <label class="form-check__label" for="example_check_2">
     Disabled checkbox
   </label>
 </div>
@@ -111,20 +111,20 @@
 
 <div class="custom">
   <div class="form-check">
-    <input class="form-check__input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check__label" for="exampleRadios1">
+    <input class="form-check__input" type="radio" name="example_radios_1" id="example_radios_1_1" value="option1" checked>
+    <label class="form-check__label" for="example_radios_1_1">
       Default radio
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check__input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-    <label class="form-check__label" for="exampleRadios2">
+    <input class="form-check__input" type="radio" name="example_radios_1" id="example_radios_1_2" value="option2">
+    <label class="form-check__label" for="example_radios_1_2">
       Second default radio
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check__input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-    <label class="form-check__label" for="exampleRadios3">
+    <input class="form-check__input" type="radio" name="example_radios_1" id="example_radios_1_3" value="option3" disabled>
+    <label class="form-check__label" for="example_radios_1_3">
       Disabled radio
     </label>
   </div>
@@ -133,20 +133,20 @@
 
 ```html
 <div class="form-check">
-  <input class="form-check__input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check__label" for="exampleRadios1">
+  <input class="form-check__input" type="radio" name="example_radios_1" id="example_radios_1_1" value="option1" checked>
+  <label class="form-check__label" for="example_radios_1_1">
     Default radio
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check__input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check__label" for="exampleRadios2">
+  <input class="form-check__input" type="radio" name="example_radios_1" id="example_radios_1_2" value="option2">
+  <label class="form-check__label" for="example_radios_1_2">
     Second default radio
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check__input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-  <label class="form-check__label" for="exampleRadios3">
+  <input class="form-check__input" type="radio" name="example_radios_1" id="example_radios_1_3" value="option3" disabled>
+  <label class="form-check__label" for="example_radios_1_3">
     Disabled radio
   </label>
 </div>
@@ -158,32 +158,32 @@
 <ul class="form-tree">
   <li>
     <div class="form-check">
-      <input class="form-check__input" type="radio" name="exampleRadios_1" id="exampleRadios1_1" value="option1" checked>
-      <label class="form-check__label" for="exampleRadios1_1">
+      <input class="form-check__input" type="radio" name="example_radios_2" id="example_radios_2_1" value="option1" checked>
+      <label class="form-check__label" for="example_radios_2_1">
         Default radio
       </label>
     </div>
     <ul class="form-tree">
       <li>
         <div class="form-check">
-          <input class="form-check__input" type="checkbox" value="" id="defaultCheck1_1" checked>
-          <label class="form-check__label" for="defaultCheck1_1">
+          <input class="form-check__input" type="checkbox" value="" id="example_check_3" checked>
+          <label class="form-check__label" for="example_check_3">
             Nested checkbox 1
           </label>
         </div>
         <ul class="form-tree">
           <li>
             <div class="form-check">
-              <input class="form-check__input" type="radio" name="exampleRadios_2" id="exampleRadios2_1" value="option1" checked>
-              <label class="form-check__label" for="exampleRadios2_1">
+              <input class="form-check__input" type="radio" name="example_radios_3" id="example_radios_3_1" value="option1" checked>
+              <label class="form-check__label" for="example_radios_3_1">
                 Nested radio
               </label>
             </div>
           </li>
           <li>
             <div class="form-check">
-              <input class="form-check__input" type="radio" name="exampleRadios_2" id="exampleRadios2_2" value="option1">
-              <label class="form-check__label" for="exampleRadios2_2">
+              <input class="form-check__input" type="radio" name="example_radios_3" id="example_radios_3_2" value="option1">
+              <label class="form-check__label" for="example_radios_3_2">
                 Second nested radio
               </label>
             </div>
@@ -192,16 +192,16 @@
       </li>
       <li>
         <div class="form-check">
-          <input class="form-check__input" type="checkbox" value="" id="defaultCheck1_2">
-          <label class="form-check__label" for="defaultCheck1_2">
+          <input class="form-check__input" type="checkbox" value="" id="example_check_4">
+          <label class="form-check__label" for="example_check_4">
             Nested checkbox 2
           </label>
         </div>
       </li>
       <li>
         <div class="form-check">
-          <input class="form-check__input" type="checkbox" value="" id="defaultCheck1_3">
-          <label class="form-check__label" for="defaultCheck1_3">
+          <input class="form-check__input" type="checkbox" value="" id="example_check_4">
+          <label class="form-check__label" for="example_check_4">
             Nested checkbox 3
           </label>
         </div>
@@ -210,15 +210,15 @@
   </li>
   <li>
     <div class="form-check">
-      <input class="form-check__input" type="radio" name="exampleRadios_1" id="exampleRadios1_2" value="option1">
-      <label class="form-check__label" for="exampleRadios1_2">
+      <input class="form-check__input" type="radio" name="example_radios_2" id="example_radios_2_2" value="option1">
+      <label class="form-check__label" for="example_radios_2_2">
         Second default radio
       </label>
     </div>
     <ul class="form-tree">
       <li>
-        <label for="example_2">First field</label>
-        <input type="text" class="form-input" id="example_2" placeholder="First field example">
+        <label for="example_input_2">Name field</label>
+        <input type="text" class="form-input" id="example_input_2" placeholder="Write your name here...">
       </li>
     </ul>
   </li>
@@ -229,32 +229,32 @@
 <ul class="form-tree">
   <li>
     <div class="form-check">
-      <input class="form-check__input" type="radio" name="exampleRadios_1" id="exampleRadios1_1" value="option1" checked>
-      <label class="form-check__label" for="exampleRadios1_1">
+      <input class="form-check__input" type="radio" name="example_radios_2" id="example_radios_2_1" value="option1" checked>
+      <label class="form-check__label" for="example_radios_2_1">
         Default radio
       </label>
     </div>
     <ul class="form-tree">
       <li>
         <div class="form-check">
-          <input class="form-check__input" type="checkbox" value="" id="defaultCheck1_1" checked>
-          <label class="form-check__label" for="defaultCheck1_1">
+          <input class="form-check__input" type="checkbox" value="" id="example_check_3" checked>
+          <label class="form-check__label" for="example_check_3">
             Nested checkbox 1
           </label>
         </div>
         <ul class="form-tree">
           <li>
             <div class="form-check">
-              <input class="form-check__input" type="radio" name="exampleRadios_2" id="exampleRadios2_1" value="option1" checked>
-              <label class="form-check__label" for="exampleRadios2_1">
+              <input class="form-check__input" type="radio" name="example_radios_3" id="example_radios_3_1" value="option1" checked>
+              <label class="form-check__label" for="example_radios_3_1">
                 Nested radio
               </label>
             </div>
           </li>
           <li>
             <div class="form-check">
-              <input class="form-check__input" type="radio" name="exampleRadios_2" id="exampleRadios2_2" value="option1">
-              <label class="form-check__label" for="exampleRadios2_2">
+              <input class="form-check__input" type="radio" name="example_radios_3" id="example_radios_3_2" value="option1">
+              <label class="form-check__label" for="example_radios_3_2">
                 Second nested radio
               </label>
             </div>
@@ -263,16 +263,16 @@
       </li>
       <li>
         <div class="form-check">
-          <input class="form-check__input" type="checkbox" value="" id="defaultCheck1_2">
-          <label class="form-check__label" for="defaultCheck1_2">
+          <input class="form-check__input" type="checkbox" value="" id="example_check_4">
+          <label class="form-check__label" for="example_check_4">
             Nested checkbox 2
           </label>
         </div>
       </li>
       <li>
         <div class="form-check">
-          <input class="form-check__input" type="checkbox" value="" id="defaultCheck1_3">
-          <label class="form-check__label" for="defaultCheck1_3">
+          <input class="form-check__input" type="checkbox" value="" id="example_check_4">
+          <label class="form-check__label" for="example_check_4">
             Nested checkbox 3
           </label>
         </div>
@@ -281,15 +281,15 @@
   </li>
   <li>
     <div class="form-check">
-      <input class="form-check__input" type="radio" name="exampleRadios_1" id="exampleRadios1_2" value="option1">
-      <label class="form-check__label" for="exampleRadios1_2">
+      <input class="form-check__input" type="radio" name="example_radios_2" id="example_radios_2_2" value="option1">
+      <label class="form-check__label" for="example_radios_2_2">
         Second default radio
       </label>
     </div>
     <ul class="form-tree">
       <li>
-        <label for="example_2">First field</label>
-        <input type="text" class="form-input" id="example_2" placeholder="First field example">
+        <label for="example_input_2">Name field</label>
+        <input type="text" class="form-input" id="example_input_2" placeholder="Write your name here...">
       </li>
     </ul>
   </li>

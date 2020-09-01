@@ -1,34 +1,34 @@
 // TODO: Add base styling from styleguide, add variables for sizes and colors
 
-label
+.ui-form-label
   display inline-block
   margin-bottom .5rem
 
-.form-input
-  display: block
-  width: 100%
-  height: 34px
-  padding: 4px 10px
-  background-color: #fff
-  background-clip: padding-box
-  border: 1px solid #ced4da
-  border-radius: 4px
-  box-sizing: border-box;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+.ui-form-input
+  display block
+  width 100%
+  height 34px
+  padding 4px 10px
+  background-color #fff
+  background-clip padding-box
+  border 1px solid #ced4da
+  border-radius 4px
+  box-sizing border-box;
+  transition border-color .15s ease-in-out, box-shadow .15s ease-in-out
 
   // Customize the `:focus` state to imitate native WebKit styles.
   &:focus
-    color: #495057
-    background-color: #fff
-    border-color: #80bdff
-    outline: 0
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25)
+    color #495057
+    background-color #fff
+    border-color #80bdff
+    outline 0
+    box-shadow 0 0 0 0.2rem rgba(0,123,255,.25)
 
   // Placeholder
   &::placeholder
-    color: #ccc
-    // Override Firefox's unusual default opacity see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1
+    color #ccc
+    // Override Firefox's unusual default opacity see https//github.com/twbs/bootstrap/pull/11526.
+    opacity 1
 
   // Disabled and read-only inputs
   //
@@ -37,10 +37,10 @@ label
   // don't honor that edge case we style them as disabled anyway.
   &:disabled,
   &[readonly]
-    background-color: #ccc
-    border-color: #999
+    background-color #ccc
+    border-color #999
     // iOS fix for unreadable disabled content see https://github.com/twbs/bootstrap/issues/11655.
-    opacity: 1
+    opacity 1
 
   // Fix height on elements
   textarea&
@@ -48,16 +48,52 @@ label
   select[size]&
     height auto
 
-.form-input--file, 
-.form-input--range
-  display block
-  width 100%
+.ui-form-check 
+  position relative
+  padding-left 20px
+  margin-bottom 5px
 
-.form-tree 
+.ui-form-check__input
+  position absolute
+  left 0
+  top 50%
+  transform translateY(-50%)
+
+.ui-form-check__label
+  display inline-block
+
+.ui-form-tree 
   list-style none
   margin 0
   padding 0
   line-height inherit
 
   & &
-    margin-left 18px
+    margin-left 20px 
+
+.ui-form-range 
+  appearance none
+  display block
+  width 100%
+  height 5px
+  background $sdfe-teal
+  border-radius 3.5px
+
+  &:hover
+    cursor pointer
+
+  &::-webkit-slider-thumb
+    -webkit-appearance none /* Override default look */
+    appearance none
+    width 15px /* Set a specific slider handle width */
+    height 15px /* Slider handle height */
+    border-radius 50%
+    background $sdfe-teal /* Green background */
+    cursor pointer /* Cursor on hover */
+
+  &::-moz-range-thumb
+    width 15px /* Set a specific slider handle width */
+    height 15px /* Slider handle height */
+    border-radius 50%
+    background $sdfe-teal /* Green background */
+    cursor pointer /* Cursor on hover */

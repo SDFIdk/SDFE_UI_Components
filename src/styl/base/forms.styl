@@ -1,5 +1,25 @@
 // TODO: Add base styling from styleguide, add variables for sizes and colors
 
+// FORM RESETS
+// Stolen from normalize.css
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea
+  font-family inherit /* 1 */
+  font-size 100% /* 1 */
+  line-height 1.15 /* 1 */
+  margin 0 /* 2 */
+
+// FORM RESET END
+
 .ui-form-label
   display inline-block
   margin-bottom .5rem
@@ -44,8 +64,7 @@
 
   // Fix height on elements
   textarea&
-  select[multiple]&, 
-  select[size]&
+  select[multiple]&
     height auto
 
 .ui-form-check 
@@ -90,6 +109,7 @@
     border-radius 50%
     background $sdfe-teal /* Green background */
     cursor pointer /* Cursor on hover */
+    border none
 
   &::-moz-range-thumb
     width 15px /* Set a specific slider handle width */
@@ -97,3 +117,4 @@
     border-radius 50%
     background $sdfe-teal /* Green background */
     cursor pointer /* Cursor on hover */
+    border none

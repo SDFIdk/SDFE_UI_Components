@@ -4,7 +4,7 @@ import UiTest from './components/UiTest'
 import UiTabs from './components/UiTabs'
 import UiAccordion from './components/UiAccordion'
 import UiCard from './components/UiCard'
-import 'normalize.css/normalize.css'
+import 'sanitize.css'
 import '../styl/main.styl'
 
 export default {

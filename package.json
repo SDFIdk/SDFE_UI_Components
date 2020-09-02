@@ -38,7 +38,6 @@
     "np": "6.3.2",
     "stylus": "0.54.8",
     "stylus-loader": "3.0.2",
-    "vue": "2.6.12",
     "vuepress": "1.5.2"
   },
   "dependencies": {

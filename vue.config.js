@@ -5,8 +5,8 @@ module.exports = {
     plugins: [
       new CopyPlugin({
         patterns: [
-          { from: 'src/assets/icons', to: 'assets/icons' },
-        ],
+          { from: 'src/assets/icons', to: 'assets/icons' }
+        ]
       })
     ]
   },

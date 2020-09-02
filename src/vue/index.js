@@ -8,7 +8,7 @@ import 'sanitize.css'
 import '../styl/main.styl'
 
 export default {
-  install(Vue, options) {
+  install (Vue, options) {
     Vue.use(UiTest)
     Vue.use(UiTabs)
     Vue.use(UiAccordion)

@@ -2,14 +2,14 @@
   <div class="ui-tabs">
     <div class="ui-tabs__header">
       <nav class="ui-tabs__nav">
-        <button 
-          v-for="(item, index) in items" 
+        <button
+          v-for="(item, index) in items"
           :key="`${ id }_item_${ index }`"
-          @click="onSelect(item)"
           class="ui-tabs__btn"
           :class="{ 'is-active': item.isActive }"
+          @click="onSelect(item)"
         >
-        {{ item.title }}
+          {{ item.title }}
         </button>
       </nav>
     </div>
@@ -22,38 +22,38 @@
 <script>
 export default {
   name: 'UiTabs',
-  data() {
+  data () {
     return {
-      id: `UiTabs_${ Date.now() }`,
+      id: `UiTabs_${Date.now()}`,
       items: [],
       currentItem: null
     }
   },
-  created() {
+  created () {
     // We wrap this in a `$nextTick()` to ensure the child tabs have been created
     this.$nextTick(() => {
-      this.items = this.$children.filter(t => t._isTab);
-      this.currentItem = this.items.find(t => t.isActive);
+      this.items = this.$children.filter(t => t._isTab)
+      this.currentItem = this.items.find(t => t.isActive)
 
       // Set the fist tab to active if none predefined
       if (!this.currentItem && this.items.length > 0) {
-        this.currentItem = this.items[0];
-        this.currentItem.isActive = true;
+        this.currentItem = this.items[0]
+        this.currentItem.isActive = true
       }
-    });
+    })
   },
   methods: {
-    onSelect(item) {
+    onSelect (item) {
       if (item === this.currentItem) {
-        return;
+        return
       }
 
       if (this.currentItem) {
-        this.currentItem.isActive = false;
+        this.currentItem.isActive = false
       }
 
-      this.currentItem = item;
-      this.currentItem.isActive = true;
+      this.currentItem = item
+      this.currentItem.isActive = true
     }
   }
 }

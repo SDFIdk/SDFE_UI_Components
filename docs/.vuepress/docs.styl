@@ -7,6 +7,7 @@ $content-class = '.custom'
 // Style example container
 .custom
   margin: 0.85rem 0;
+  overflow hidden
 
 // Example background pattern
 .example-pattern
@@ -16,3 +17,21 @@ $content-class = '.custom'
     linear-gradient(45deg, #bdbcef 25%, transparent 25%, transparent 75%, #bdbcef 75%, #bdbcef),
     linear-gradient(-45deg, #bdbcef 25%, transparent 25%, transparent 75%, #bdbcef 75%, #bdbcef);
   background-size: 12px 12px;
+
+.example-icon
+  display inline-block
+  border 1px solid #c3c3c3
+  border-radius 4px
+  text-align center
+  padding 4px
+  margin 0 10px 10px 0
+  width calc(25% - 10px)
+  float left
+
+  img, 
+  svg 
+    height 50px
+    width 50px
+
+  code
+    display block

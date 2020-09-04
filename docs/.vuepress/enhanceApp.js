@@ -3,7 +3,8 @@
 import UiComponents from '../../src/vue';
 import './docs.styl';
 
-// async function is also supported, too
+import pageComponents from '@internal/page-components'
+
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
@@ -11,7 +12,11 @@ export default ({
   siteData, // site metadata
   isServer // is this enhancement applied in server-rendering or client
 }) => {
-  // ...apply enhancements to the app
+
+  // Hack fix: https://github.com/vuejs/vuepress/issues/1173#issuecomment-470534176
+  for (const [name, component] of Object.entries(pageComponents)) {
+    Vue.component(name, component)
+  }
 
   Vue.use(UiComponents);
 }

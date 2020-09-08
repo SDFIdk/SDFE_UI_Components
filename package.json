@@ -5,11 +5,13 @@
   "author": "Dataforsyningen",
   "scripts": {
     "build": "vue-cli-service build --target lib --name ui-components src/vue/index.js",
+    "watch": "vue-cli-service build --mode production --target lib --name ui-components src/vue/index.js --watch",
     "lint": "vue-cli-service lint --no-fix",
     "lint:fix": "vue-cli-service lint",
     "build-styl": "webpack --mode development",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
+    "dev": "npm run docs:dev | npm run watch",
     "test": "echo \"Warning: no test specified\" && exit 0",
     "version": "np"
   },

@@ -4,6 +4,8 @@ import UiTest from './components/UiTest'
 import UiTabs from './components/UiTabs'
 import UiAccordion from './components/UiAccordion'
 import UiCard from './components/UiCard'
+import UiFormCheckbox from './components/UiFormCheckbox'
+import UiFormRange from './components/UiFormRange'
 import '../styl/main.styl'
 
 export default {
@@ -12,5 +14,7 @@ export default {
     Vue.use(UiTabs)
     Vue.use(UiAccordion)
     Vue.use(UiCard)
+    Vue.use(UiFormCheckbox)
+    Vue.use(UiFormRange)
   }
 }

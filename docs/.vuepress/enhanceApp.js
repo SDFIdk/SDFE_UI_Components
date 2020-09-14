@@ -19,4 +19,8 @@ export default ({
   }
 
   Vue.use(UiComponents);
+
+  window.testFn = () => {
+    console.log('test')
+  }
 }

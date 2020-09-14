@@ -23,7 +23,8 @@ module.exports = {
         children: [
           '/components/cards/',
           '/components/tabs/',
-          '/components/accordion/'
+          '/components/accordion/',
+          '/components/forms/'
         ]
       }
     ]

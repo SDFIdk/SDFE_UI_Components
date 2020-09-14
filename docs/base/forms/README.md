@@ -67,13 +67,17 @@
 ## Range input
 
 <div class="custom"> 
-  <label class="ui-form-label" for="example_input_5">Example Range input</label>
-  <input type="range" class="ui-form-range" id="example_input_5">
+  <div class="ui-form-range">
+    <label class="ui-form-label" for="example_input_5">Example Range input</label>
+    <input type="range" class="ui-form-range__input" id="example_input_5">
+  </div>
 </div>
 
 ```html
-<label class="ui-form-label" for="example_input_5">Example Range input</label>
-<input type="range" class="ui-form-range" id="example_input_5">
+<div class="ui-form-range">
+  <label class="ui-form-label" for="example_input_5">Example Range input</label>
+  <input type="range" class="ui-form-range__input" id="example_input_5">
+</div>
 ```
 
 ## Checkboxes and radios

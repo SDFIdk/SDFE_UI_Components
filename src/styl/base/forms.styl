@@ -69,7 +69,7 @@
 
 .ui-form-tree 
   list-style none
-  margin 0
+  margin 0 0 0.5rem 0
   padding 0
   line-height inherit
 
@@ -77,6 +77,9 @@
     margin-left 20px 
 
 .ui-form-range 
+  position relative
+
+.ui-form-range__input
   appearance none
   display block
   width 100%
@@ -85,23 +88,27 @@
   border-radius 3.5px
   margin-top .5rem
 
-  &:hover
-    cursor pointer
-
   &::-webkit-slider-thumb
     -webkit-appearance none /* Override default look */
     appearance none
-    width 15px /* Set a specific slider handle width */
-    height 15px /* Slider handle height */
+    width 14px /* Set a specific slider handle width */
+    height 14px /* Slider handle height */
     border-radius 50%
     background $sdfe-teal /* Green background */
     cursor pointer /* Cursor on hover */
     border none
 
   &::-moz-range-thumb
-    width 15px /* Set a specific slider handle width */
-    height 15px /* Slider handle height */
+    width 14px /* Set a specific slider handle width */
+    height 14px /* Slider handle height */
     border-radius 50%
     background $sdfe-teal /* Green background */
     cursor pointer /* Cursor on hover */
     border none
+
+// .ui-form-range__value-tip
+//   position absolute
+
+//   &:hover
+//     cursor pointer
+

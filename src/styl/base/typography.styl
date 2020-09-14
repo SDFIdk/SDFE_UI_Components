@@ -1,5 +1,4 @@
 html
-  font-family "Roboto", Helvetica, Arial, sans-serif
   font-size 16px
 
 $heading-base
@@ -14,6 +13,11 @@ $heading-base
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size $font-size-base
+  font-weight $font-weight-base
+  // font-weight 300
+  // font-size 0.938rem
+  // letter-spacing 0rem
+  line-height 1.25
 
   h1,
   .h1
@@ -24,11 +28,14 @@ $heading-base
     line-height $h1-line-height
 
   p
-    font-weight 300
-    font-size 0.938rem
-    letter-spacing 0rem
-    line-height 1.25rem
-    margin-bottom 1rem
+    // font-weight 300
+    // font-size 0.938rem
+    // letter-spacing 0rem
+    // line-height 1.25rem
+    margin-bottom 0.5rem
+
+  b 
+    font-weight 700
 
   a
     color $link-color

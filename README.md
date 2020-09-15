@@ -17,10 +17,10 @@ npm install @dataforsyningen/sdfe-ui-components --save
 
 Install components and styles in your app
 ```js
-import SDFEUIComponents from '@dataforsyningen/sdfe-ui-components';
-import '@dataforsyningen/sdfe-ui-components/dist/ui-components.css';
+import SDFEUIComponents from '@dataforsyningen/sdfe-ui-components'
+import '@dataforsyningen/sdfe-ui-components/dist/ui-components.css'
 
-Vue.use(SDFEUIComponents);
+Vue.use(SDFEUIComponents)
 ```
 
 Update to latest version
@@ -53,16 +53,20 @@ npm login --registry=https://npm.pkg.github.com
 Clone repo and `npm install`. Then run the local docs site with 
 
 ```bash
-npm run docs:dev
+npm run dev
 ```
+> This will also build and watch the package files in `/dist/`
 
 ### Add a new component
 
-1. Create component files in `src/components/`
-2. Register component in `src/index.js`
-3. Write documentation with example in `docs/components/README.md`
+1. Create component files in `src/vue/components/`
+2. Register component in `src/vue/index.js`
+3. Write documentation with example in `docs/components/[name]/README.md`
+4. If needed, create example component for use in documentation in `docs/.vuepress/components/`.
+5. Add the new documentation page to the navigation in `docs/.vuepress/config.js`.
 
 ### Publish new package version
+> TO BE UPDATED!
 
 1. Compile library to dist folder
 ```bash

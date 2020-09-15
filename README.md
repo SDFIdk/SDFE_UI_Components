@@ -28,6 +28,41 @@ Update to latest version
 npm install @dataforsyningen/sdfe-ui-components@latest --save
 ```
 
+### Edit UI components side by side with your project
+
+This is an example of a webpack config update that allows you to reference the `sdfe-ui-components` from a local directory when running local dev site. You'll need to add ` -- --env.useLocalUI` to the npm command, e.g.
+
+```
+npm run dev -- --env.useLocalUI
+```
+
+```js
+// webpack.config.js
+const path = require('path')
+
+module.exports = env => {
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      // Link to local repository when running
+      // npm run dev -- --env.useLocalUI
+      '@dataforsyningen/sdfe-ui-components': env && env.useLocalUI ? path.join(__dirname, '../SDFE_UI_Components') : '@dataforsyningen/sdfe-ui-components'
+    }
+  }
+}
+```
+Or in a vue-cli app (not tested yet)
+```js
+// vue.config.js
+module.exports = {
+  chainWebpack: config => {
+    config.resolve
+      .alias
+        .set('@dataforsyningen/sdfe-ui-components', process.env && process.env.useLocalUI ? path.join(__dirname, '../SDFE_UI_Components') : '@dataforsyningen/sdfe-ui-components')
+  }
+}
+```
+
 ## Develop new features in this repo
 
 ### Authenticate

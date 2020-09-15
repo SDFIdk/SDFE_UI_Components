@@ -1,9 +1,15 @@
-.content__default
-  @import '../../src/styl/main.styl'
+// Variable overrides (theme customization)
+$content-class = '.custom'
 
+// Import all styles
+@import '../../src/styl/main.styl'
+
+// Style example container
 .custom
+  clearfix()
   margin: 0.85rem 0;
 
+// Example background pattern
 .example-pattern
   padding: 20px;
   background-color: #a4a3da;
@@ -11,3 +17,21 @@
     linear-gradient(45deg, #bdbcef 25%, transparent 25%, transparent 75%, #bdbcef 75%, #bdbcef),
     linear-gradient(-45deg, #bdbcef 25%, transparent 25%, transparent 75%, #bdbcef 75%, #bdbcef);
   background-size: 12px 12px;
+
+.example-icon
+  display inline-block
+  border 1px solid #c3c3c3
+  border-radius 4px
+  text-align center
+  padding 4px
+  margin 0 10px 10px 0
+  width calc(25% - 10px)
+  float left
+
+  img, 
+  svg 
+    height 50px
+    width 50px
+
+  code
+    display block

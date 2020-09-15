@@ -1,8 +1,8 @@
 <template>
   <div
-    :class="{ 'is-active': isActive }" 
+    :class="{ 'is-active': isActive }"
     class="ui-tabs__item"
-    >
+  >
     <slot />
   </div>
 </template>
@@ -17,35 +17,35 @@ export default {
     },
     active: {
       type: Boolean,
-      default() {
+      default () {
         return false
       }
     }
   },
-  data() {
+  data () {
     return {
       isActive: false
     }
   },
   computed: {
-    _isTab() {
+    _isTab () {
       // For parent sniffing of child
       return true
     },
-    id() {
-      return this.$vnode.key || `UiTabsItem_${ this._uid }`
+    id () {
+      return this.$vnode.key || `UiTabsItem_${this._uid}`
     }
-  },
-  created() {
-    this.isActive = this.active;
   },
   watch: {
-    isActive(val) {
+    isActive (val) {
       if (val) {
         // Emit event when tab is selected
-        this.$emit('onSelect', this.id);
+        this.$emit('onSelect', this.id)
       }
     }
+  },
+  created () {
+    this.isActive = this.active
   }
 }
 </script>

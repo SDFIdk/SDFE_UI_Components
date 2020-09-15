@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-import UiTest from './UiTest.vue';
+import UiTest from './UiTest.vue'
 
 export default {
-  install(Vue, options) {
-    Vue.component(UiTest.name, UiTest);
+  install (Vue, options) {
+    Vue.component(UiTest.name, UiTest)
   }
-};
+}

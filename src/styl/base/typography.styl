@@ -1,18 +1,45 @@
 html
-  font-family "Roboto", Helvetica, Arial, sans-serif
   font-size 16px
 
-body 
-  color: $text-body
+$heading-base
+  font-weight $heading-weight
+  margin $heading-margin
+  line-height $heading-line-height
 
-// h1,
-// .h1
-//   font-weight 300
-//   color $h1-color
-//   font-size 2.813rem
-//   letter-spacing 0.02rem
-//   line-height 3.25rem
-//   margin-bottom 0.8rem
+// Apply class to <body>
+{$content-class}
+  color $text-body
+  font-family $font-family-base
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-size $font-size-base
+  font-weight $font-weight-base
+  // font-weight 300
+  // font-size 0.938rem
+  // letter-spacing 0rem
+  line-height 1.25
+
+  h1,
+  .h1
+    @extend $heading-base
+    font-weight $h1-weight
+    color $h1-color
+    font-size $h1-size
+    line-height $h1-line-height
+
+  p
+    // font-weight 300
+    // font-size 0.938rem
+    // letter-spacing 0rem
+    // line-height 1.25rem
+    margin-bottom 0.5rem
+
+  b 
+    font-weight 700
+
+  a
+    color $link-color
+
 
 // h2,
 // .h2
@@ -61,12 +88,3 @@ body
 //   margin-bottom 0.3rem
 //   text-transform uppercase
 
-p
-  font-weight 300
-  font-size 0.938rem
-  letter-spacing 0rem
-  line-height 1.25rem
-  margin-bottom 1rem
-
-a
-  color $link-color

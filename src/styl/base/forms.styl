@@ -1,0 +1,149 @@
+// TODO: Add base styling from styleguide, add variables for sizes and colors
+
+.ui-form-label
+  display block
+  margin-bottom .5rem
+
+.ui-form-input
+  display block
+  width 100%
+  height 34px
+  padding 4px 10px
+  background-color #fff
+  background-clip padding-box
+  border 1px solid #ced4da
+  border-radius 4px
+  box-sizing border-box
+  margin-top .5rem
+  transition border-color .15s ease-in-out, box-shadow .15s ease-in-out
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus
+    color #495057
+    background-color #fff
+    border-color #80bdff
+    outline 0
+    box-shadow 0 0 0 0.2rem rgba(0,123,255,.25)
+
+  // Placeholder
+  &::placeholder
+    color #ccc
+    // Override Firefox's unusual default opacity see https//github.com/twbs/bootstrap/pull/11526.
+    opacity 1
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case we style them as disabled anyway.
+  &:disabled,
+  &[readonly]
+    background-color #ccc
+    border-color #999
+    // iOS fix for unreadable disabled content see https://github.com/twbs/bootstrap/issues/11655.
+    opacity 1
+
+  // Fix height on elements
+  // TODO: Apply height/layout more specifically so we don't need to override
+  textarea&
+  select[multiple]&
+    height auto
+
+  select:not([multiple])&
+    background url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+') no-repeat right 8px top 50%
+    appearance none
+
+.ui-form-check 
+  position relative
+  padding-left 20px
+  margin-bottom 5px
+
+.ui-form-check__input
+  position absolute
+  left 0
+  top 50%
+  transform translateY(-50%)
+
+.ui-form-check__label
+  display inline-block
+
+.ui-form-tree 
+  list-style none
+  margin 0 0 0.5rem 0
+  padding 0
+  line-height inherit
+
+  & &
+    margin-left 20px 
+
+.ui-form-range
+    position relative;
+    margin-bottom .5rem
+
+.ui-form-range__input
+  appearance none
+  display block
+  width 100%
+  height 5px
+  background $sdfe-teal
+  border-radius 3.5px
+  margin-top .5rem
+
+  &::-webkit-slider-thumb
+    -webkit-appearance none /* Override default look */
+    appearance none
+    width 14px /* Set a specific slider handle width */
+    height 14px /* Slider handle height */
+    border-radius 50%
+    background $sdfe-teal /* Green background */
+    cursor pointer /* Cursor on hover */
+    border none
+
+  &::-moz-range-thumb
+    width 14px /* Set a specific slider handle width */
+    height 14px /* Slider handle height */
+    border-radius 50%
+    background $sdfe-teal /* Green background */
+    cursor pointer /* Cursor on hover */
+    border none
+
+.ui-form-range__value
+    position relative
+    top 0
+    height 0
+    margin-top 32px
+    margin-right 7px // half of thumb size
+    margin-left 7px // half of thumb size
+
+.ui-form-range__value-tip
+    position absolute
+    top 0
+    cursor default
+    padding-bottom 6px
+
+.ui-form-range__value-tip-val
+    height 20px
+    line-height 20px
+    background: $sdfe-teal
+    color #fff
+    font-size 12px
+    display inline-block
+    position absolute
+    left 50%
+    transform translate(-50%, -28px)
+    border-radius 6px
+    white-space nowrap
+    padding 0 5px
+  
+    &::before
+      content ""
+      position absolute
+      display inline-block
+      width 0
+      height 0
+      border-top 4px solid $sdfe-teal
+      border-left 4px solid transparent
+      border-right 4px solid transparent
+      bottom 0
+      transform: translate(-50%, 100%)
+      left 50%

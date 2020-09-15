@@ -2,45 +2,58 @@
   "name": "@dataforsyningen/sdfe-ui-components",
   "version": "0.1.0",
   "description": "UI library for CSS and Vue components, published as npm packages for use across projects",
+  "author": "Dataforsyningen",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name ui-components src/vue/index.js",
+    "watch": "vue-cli-service build --mode production --target lib --name ui-components src/vue/index.js --watch",
+    "lint": "vue-cli-service lint --no-fix",
+    "lint:fix": "vue-cli-service lint",
+    "build-styl": "webpack --mode development",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "dev": "npm run docs:dev | npm run watch",
+    "test": "echo \"Warning: no test specified\" && exit 0",
+    "version": "np"
+  },
   "main": "src/vue/index.js",
   "files": [
     "src",
     "dist"
   ],
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "build": "vue-cli-service build --target lib --name ui-components src/vue/index.js",
-    "build-styl": "webpack --mode development",
-    "test": "echo \"Warning: no test specified\" && exit 0",
-    "version": "np"
+  "dependencies": {
+    "sanitize.css": "12.0.1",
+    "vue-svg-inline-loader": "1.5.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dataforsyningen/SDFE_UI_Components.git"
+  "devDependencies": {
+    "@vue/cli": "4.4.6",
+    "@vue/cli-plugin-eslint": "4.5.4",
+    "@vue/cli-service": "4.4.6",
+    "@vue/eslint-config-standard": "5.1.2",
+    "copy-webpack-plugin": "6.0.3",
+    "eslint": "6.7.2",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.0",
+    "eslint-plugin-vue": "6.2.2",
+    "np": "6.3.2",
+    "stylus": "0.54.8",
+    "stylus-loader": "3.0.2",
+    "vuepress": "1.5.2"
   },
+  "bugs": {
+    "url": "https://github.com/dataforsyningen/SDFE_UI_Components/issues"
+  },
+  "homepage": "https://github.com/dataforsyningen/SDFE_UI_Components#readme",
   "keywords": [
     "ui",
     "components",
     "vue",
     "css"
   ],
-  "author": "Dataforsyningen",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dataforsyningen/SDFE_UI_Components/issues"
-  },
-  "homepage": "https://github.com/dataforsyningen/SDFE_UI_Components#readme",
-  "devDependencies": {
-    "@vue/cli": "4.4.6",
-    "@vue/cli-service": "4.4.6",
-    "copy-webpack-plugin": "6.0.3",
-    "np": "6.3.2",
-    "stylus": "0.54.8",
-    "stylus-loader": "3.0.2",
-    "vuepress": "1.5.2"
-  },
-  "dependencies": {
-    "normalize.css": "8.0.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dataforsyningen/SDFE_UI_Components.git"
   }
 }

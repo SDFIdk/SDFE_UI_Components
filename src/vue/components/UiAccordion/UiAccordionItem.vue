@@ -1,13 +1,13 @@
 <template>
   <div
-    :class="{ 'is-active': isActive }" 
+    :class="{ 'is-active': isActive }"
     class="ui-accordion__item"
-    >
-    <button 
-      @click="onSelect"
+  >
+    <button
       class="ui-accordion__btn"
+      @click="onSelect"
     >
-    {{ title }}
+      {{ title }}
     </button>
     <div class="ui-accordion__body">
       <slot />
@@ -25,35 +25,35 @@ export default {
     },
     active: {
       type: Boolean,
-      default() {
+      default () {
         return false
       }
     }
   },
-  data() {
+  data () {
     return {
       isActive: false
     }
   },
   computed: {
-    id() {
-      return this.$vnode.key || `UiAccordionItem_${ this._uid }`
+    id () {
+      return this.$vnode.key || `UiAccordionItem_${this._uid}`
     }
   },
-  created() {
-    this.isActive = this.active;
+  created () {
+    this.isActive = this.active
 
-    this.$parent.$on('onItemSelect', this.onItemSelect);
+    this.$parent.$on('onItemSelect', this.onItemSelect)
   },
   methods: {
-    onSelect() {
+    onSelect () {
       // Internal event for selecting active item
-      this.$parent.$emit('onItemSelect', this.id);
+      this.$parent.$emit('onItemSelect', this.id)
       // Emit event for use in implementation
-      this.$parent.$emit('onSelect', this.id);
+      this.$parent.$emit('onSelect', this.id)
     },
-    onItemSelect(id) {
-      this.isActive = (id === this.id);
+    onItemSelect (id) {
+      this.isActive = (id === this.id)
     }
   }
 }

@@ -17,15 +17,50 @@ npm install @dataforsyningen/sdfe-ui-components --save
 
 Install components and styles in your app
 ```js
-import SDFEUIComponents from '@dataforsyningen/sdfe-ui-components';
-import '@dataforsyningen/sdfe-ui-components/dist/ui-components.css';
+import SDFEUIComponents from '@dataforsyningen/sdfe-ui-components'
+import '@dataforsyningen/sdfe-ui-components/dist/ui-components.css'
 
-Vue.use(SDFEUIComponents);
+Vue.use(SDFEUIComponents)
 ```
 
 Update to latest version
 ```zsh
 npm install @dataforsyningen/sdfe-ui-components@latest --save
+```
+
+### Edit UI components side by side with your project
+
+This is an example of a webpack config update that allows you to reference the `sdfe-ui-components` from a local directory when running local dev site. You'll need to add ` -- --env.useLocalUI` to the npm command, e.g.
+
+```
+npm run dev -- --env.useLocalUI
+```
+
+```js
+// webpack.config.js
+const path = require('path')
+
+module.exports = env => {
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      // Link to local repository when running
+      // npm run dev -- --env.useLocalUI
+      '@dataforsyningen/sdfe-ui-components': env && env.useLocalUI ? path.join(__dirname, '../SDFE_UI_Components') : '@dataforsyningen/sdfe-ui-components'
+    }
+  }
+}
+```
+Or in a vue-cli app (not tested yet)
+```js
+// vue.config.js
+module.exports = {
+  chainWebpack: config => {
+    config.resolve
+      .alias
+        .set('@dataforsyningen/sdfe-ui-components', process.env && process.env.useLocalUI ? path.join(__dirname, '../SDFE_UI_Components') : '@dataforsyningen/sdfe-ui-components')
+  }
+}
 ```
 
 ## Develop new features in this repo
@@ -52,17 +87,21 @@ npm login --registry=https://npm.pkg.github.com
 
 Clone repo and `npm install`. Then run the local docs site with 
 
-```zsh
-npm run docs:dev
+```bash
+npm run dev
 ```
+> This will also build and watch the package files in `/dist/`
 
 ### Add a new component
 
-1. Create component files in `src/components/`
-2. Register component in `src/index.js`
-3. Write documentation with example in `docs/components/README.md`
+1. Create component files in `src/vue/components/`
+2. Register component in `src/vue/index.js`
+3. Write documentation with example in `docs/components/[name]/README.md`
+4. If needed, create example component for use in documentation in `docs/.vuepress/components/`.
+5. Add the new documentation page to the navigation in `docs/.vuepress/config.js`.
 
 ### Publish new package version
+> TO BE UPDATED!
 
 1. Compile library to dist folder
 ```zsh

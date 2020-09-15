@@ -8,9 +8,25 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/Kortforsyningen/SDFE_UI_Components' }
     ],
     sidebar: [
-      '/base/',
+      {
+        title: 'Base',
+        path: '/base/',
+        children: [
+          '/base/',
+          '/base/forms/'
+        ]
+      },
       '/icons/',
-      '/components/'
+      {
+        title: 'Components',
+        path: '/components/',
+        children: [
+          '/components/cards/',
+          '/components/tabs/',
+          '/components/accordion/',
+          '/components/forms/'
+        ]
+      }
     ]
   },
   plugins: [

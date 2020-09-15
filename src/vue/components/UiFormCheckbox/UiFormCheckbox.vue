@@ -31,7 +31,7 @@ export default {
   },
   data () {
     return {
-      id: `ui_form_checkbox_${ this._uid }`,
+      id: `ui_form_checkbox_${this._uid}`,
       model: this.checked
     }
   },

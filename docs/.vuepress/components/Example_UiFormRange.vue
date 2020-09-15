@@ -1,9 +1,12 @@
 <template>
-  <UiFormRange
-    :value="value"
-    :options="options"
-    @change="onChange"
-  />
+  <div>
+    <UiFormRange
+      :value="value"
+      :options="options"
+      @change="onChange"
+    />
+    <span>Value: {{ value }}</span>
+  </div>
 </template>
 
 <script>
@@ -30,7 +33,7 @@ export default {
   },
   methods: {
     onChange(value) {
-      console.log('range change', value)
+      this.value = value
     }
   }
 }

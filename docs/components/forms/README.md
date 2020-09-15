@@ -1,4 +1,5 @@
 # Forms
+As a rule of thumb, form components work with the principle of props in, events out.
 
 ## Checkbox
 

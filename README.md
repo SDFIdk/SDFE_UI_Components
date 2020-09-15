@@ -5,13 +5,13 @@ UI library for CSS and Vue components, published as npm packages for use across 
 
 Add or update your local `.npmrc`
 
-```bash
+```properties
 @dataforsyningen:registry=https://npm.pkg.github.com/dataforsyningen
 save-exact=true
 ```
 
 Install package as dependency
-```bash
+```zsh
 npm install @dataforsyningen/sdfe-ui-components --save
 ```
 
@@ -24,7 +24,7 @@ Vue.use(SDFEUIComponents)
 ```
 
 Update to latest version
-```bash
+```zsh
 npm install @dataforsyningen/sdfe-ui-components@latest --save
 ```
 
@@ -73,7 +73,7 @@ module.exports = {
 
 2. Authenticate by logging in to npm with your personal access token. This will add the token to your `~/.npmrc` file. (See [Configuring npm for use with GitHub Packages](https://docs.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages))
 
-```bash
+```zsh
 npm login --registry=https://npm.pkg.github.com
 
 > Username: USERNAME
@@ -104,13 +104,13 @@ npm run dev
 > TO BE UPDATED!
 
 1. Compile library to dist folder
-```bash
+```zsh
 npm install # "npm ci" on CI tool
 npm run build
 ```
 
 2. Bump version and release tag on Github
-```bash
+```zsh
 npm run version -- patch
 # similar to `np patch` command
 ```
@@ -119,6 +119,6 @@ npm run version -- patch
 > To release minor version instead of patch, write `npm run version -- minor`. See [np documentation](https://www.npmjs.com/package/np).
 
 3. Publish npm package to [npm.pkg.github.com](https://github.com/dataforsyningen/SDFE_UI_Components/packages/336305)
-```bash
+```zsh
 npm publish
 ```

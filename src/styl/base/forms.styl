@@ -14,7 +14,7 @@
   border 1px solid #ced4da
   border-radius 4px
   box-sizing border-box
-  margin-top .5rem
+  margin-bottom .5rem
   transition border-color .15s ease-in-out, box-shadow .15s ease-in-out
 
   // Customize the `:focus` state to imitate native WebKit styles.
@@ -50,8 +50,10 @@
     height auto
 
   select:not([multiple])&
-    background url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+') no-repeat right 8px top 50%
+    background #fff url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+') no-repeat right 8px top 50%
     appearance none
+    padding-right 18px
+    text-overflow ellipsis
 
 .ui-form-check 
   position relative
@@ -68,16 +70,41 @@
   display inline-block
 
 .ui-form-tree 
+  clearfix()
   list-style none
-  margin 0 0 0.5rem 0
+  margin 0
   padding 0
   line-height inherit
 
-  & &
-    margin-left 20px 
+  & & > .ui-form-tree__item
+    margin-left 20px
+
+.ui-form-tree__item
+  clearfix()
+  padding 0
+  margin 0
+  position relative
+
+  &.is-active
+    margin-bottom 0.5rem
+    padding-right 5px
+
+    & & 
+      margin-bottom 0
+
+    &::before
+      border-radius 4px
+      content ''
+      display block
+      background #dcf4f7
+      width calc(100% + 8px)
+      height calc(100% + 4px)
+      position absolute
+      left -8px
+      top -4px
 
 .ui-form-range
-    position relative;
+    position relative
     margin-bottom .5rem
 
 .ui-form-range__input

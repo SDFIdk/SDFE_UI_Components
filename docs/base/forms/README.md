@@ -160,7 +160,7 @@
 
 <div class="custom">
 <ul class="ui-form-tree">
-  <li>
+  <li class="ui-form-tree__item">
     <div class="ui-form-check">
       <input class="ui-form-check__input" type="radio" name="example_radios_2" id="example_radios_2_1" value="option1" checked>
       <label class="ui-form-check__label" for="example_radios_2_1">
@@ -168,7 +168,7 @@
       </label>
     </div>
     <ul class="ui-form-tree">
-      <li>
+      <li class="ui-form-tree__item is-active">
         <div class="ui-form-check">
           <input class="ui-form-check__input" type="checkbox" value="" id="example_check_3" checked>
           <label class="ui-form-check__label" for="example_check_3">
@@ -176,7 +176,7 @@
           </label>
         </div>
         <ul class="ui-form-tree">
-          <li>
+          <li class="ui-form-tree__item">
             <div class="ui-form-check">
               <input class="ui-form-check__input" type="radio" name="example_radios_3" id="example_radios_3_1" value="option1" checked>
               <label class="ui-form-check__label" for="example_radios_3_1">
@@ -184,7 +184,7 @@
               </label>
             </div>
           </li>
-          <li>
+          <li class="ui-form-tree__item">
             <div class="ui-form-check">
               <input class="ui-form-check__input" type="radio" name="example_radios_3" id="example_radios_3_2" value="option1">
               <label class="ui-form-check__label" for="example_radios_3_2">
@@ -194,7 +194,7 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li class="ui-form-tree__item">
         <div class="ui-form-check">
           <input class="ui-form-check__input" type="checkbox" value="" id="example_check_4">
           <label class="ui-form-check__label" for="example_check_4">
@@ -202,7 +202,7 @@
           </label>
         </div>
       </li>
-      <li>
+      <li class="ui-form-tree__item">
         <div class="ui-form-check">
           <input class="ui-form-check__input" type="checkbox" value="" id="example_check_5">
           <label class="ui-form-check__label" for="example_check_5">
@@ -212,7 +212,7 @@
       </li>
     </ul>
   </li>
-  <li>
+  <li class="ui-form-tree__item">
     <div class="ui-form-check">
       <input class="ui-form-check__input" type="radio" name="example_radios_2" id="example_radios_2_2" value="option1">
       <label class="ui-form-check__label" for="example_radios_2_2">
@@ -220,7 +220,7 @@
       </label>
     </div>
     <ul class="ui-form-tree">
-      <li>
+      <li class="ui-form-tree__item">
         <label class="ui-form-label" for="example_input_6">Name field</label>
         <input type="text" class="ui-form-input" id="example_input_6" placeholder="Write your name here...">
       </li>
@@ -231,7 +231,7 @@
 
 ```html
 <ul class="ui-form-tree">
-  <li>
+  <li class="ui-form-tree__item">
     <div class="ui-form-check">
       <input class="ui-form-check__input" type="radio" name="example_radios_2" id="example_radios_2_1" value="option1" checked>
       <label class="ui-form-check__label" for="example_radios_2_1">
@@ -239,7 +239,7 @@
       </label>
     </div>
     <ul class="ui-form-tree">
-      <li>
+      <li class="ui-form-tree__item is-active">
         <div class="ui-form-check">
           <input class="ui-form-check__input" type="checkbox" value="" id="example_check_3" checked>
           <label class="ui-form-check__label" for="example_check_3">
@@ -247,7 +247,7 @@
           </label>
         </div>
         <ul class="ui-form-tree">
-          <li>
+          <li class="ui-form-tree__item">
             <div class="ui-form-check">
               <input class="ui-form-check__input" type="radio" name="example_radios_3" id="example_radios_3_1" value="option1" checked>
               <label class="ui-form-check__label" for="example_radios_3_1">
@@ -255,7 +255,7 @@
               </label>
             </div>
           </li>
-          <li>
+          <li class="ui-form-tree__item">
             <div class="ui-form-check">
               <input class="ui-form-check__input" type="radio" name="example_radios_3" id="example_radios_3_2" value="option1">
               <label class="ui-form-check__label" for="example_radios_3_2">
@@ -265,7 +265,7 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li class="ui-form-tree__item">
         <div class="ui-form-check">
           <input class="ui-form-check__input" type="checkbox" value="" id="example_check_4">
           <label class="ui-form-check__label" for="example_check_4">
@@ -273,7 +273,7 @@
           </label>
         </div>
       </li>
-      <li>
+      <li class="ui-form-tree__item">
         <div class="ui-form-check">
           <input class="ui-form-check__input" type="checkbox" value="" id="example_check_5">
           <label class="ui-form-check__label" for="example_check_5">
@@ -283,7 +283,7 @@
       </li>
     </ul>
   </li>
-  <li>
+  <li class="ui-form-tree__item">
     <div class="ui-form-check">
       <input class="ui-form-check__input" type="radio" name="example_radios_2" id="example_radios_2_2" value="option1">
       <label class="ui-form-check__label" for="example_radios_2_2">
@@ -291,7 +291,7 @@
       </label>
     </div>
     <ul class="ui-form-tree">
-      <li>
+      <li class="ui-form-tree__item">
         <label class="ui-form-label" for="example_input_6">Name field</label>
         <input type="text" class="ui-form-input" id="example_input_6" placeholder="Write your name here...">
       </li>

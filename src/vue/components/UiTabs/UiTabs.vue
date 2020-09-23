@@ -13,7 +13,10 @@
         </button>
       </nav>
     </div>
-    <div v-if="hasTabContent" class="ui-tabs__body">
+    <div
+      v-if="hasTabContent"
+      class="ui-tabs__body"
+    >
       <slot />
     </div>
   </div>
@@ -41,7 +44,7 @@ export default {
         this.currentItem = this.items[0]
         this.currentItem.isActive = true
       }
-      
+
       if (this.currentItem) {
         this.hasTabContent = this.componentHasSlotContent(this.currentItem)
       }

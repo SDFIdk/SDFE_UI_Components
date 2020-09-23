@@ -13,7 +13,10 @@
         </button>
       </nav>
     </div>
-    <div class="ui-tabs__body">
+    <div
+      v-if="hasTabContent"
+      class="ui-tabs__body"
+    >
       <slot />
     </div>
   </div>
@@ -26,7 +29,8 @@ export default {
     return {
       id: `UiTabs_${Date.now()}`,
       items: [],
-      currentItem: null
+      currentItem: null,
+      hasTabContent: true
     }
   },
   created () {
@@ -40,9 +44,16 @@ export default {
         this.currentItem = this.items[0]
         this.currentItem.isActive = true
       }
+
+      if (this.currentItem) {
+        this.hasTabContent = this.componentHasSlotContent(this.currentItem)
+      }
     })
   },
   methods: {
+    componentHasSlotContent (tabComponent) {
+      return !!tabComponent.$slots.default
+    },
     onSelect (item) {
       if (item === this.currentItem) {
         return
@@ -54,6 +65,8 @@ export default {
 
       this.currentItem = item
       this.currentItem.isActive = true
+
+      this.hasTabContent = this.componentHasSlotContent(this.currentItem)
     }
   }
 }

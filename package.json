@@ -1,6 +1,6 @@
 {
   "name": "@dataforsyningen/sdfe-ui-components",
-  "version": "0.2.2",
+  "version": "0.2.3-beta",
   "description": "UI library for CSS and Vue components, published as npm packages for use across projects",
   "author": "Dataforsyningen",
   "scripts": {

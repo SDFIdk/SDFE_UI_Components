@@ -49,12 +49,10 @@ export default {
   },
   methods: {
     select() {
-      console.log('select()', this.id)
       this.isActive = true
       this.$emit('onSelect', this.id)
     },
     unSelect() {
-      console.log('unSelect()', this.id)
       this.isActive = false
     }
   },

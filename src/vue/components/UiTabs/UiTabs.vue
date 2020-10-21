@@ -42,7 +42,7 @@ export default {
       // Set the fist tab to active if none predefined
       if (!this.currentItem && this.items.length > 0) {
         this.currentItem = this.items[0]
-        this.currentItem.isActive = true
+        this.currentItem.select()
       }
 
       if (this.currentItem) {
@@ -52,13 +52,9 @@ export default {
   },
   methods: {
     componentHasSlotContent (tabComponent) {
-      return !!tabComponent.$slots.default
+      return tabComponent && !!tabComponent.$slots.default
     },
     onClick (clickedItem) {
-      if (clickedItem === this.currentItem) {
-        return
-      }
-
       this.items.forEach(item => {
         if (clickedItem === item) {
           item.select()

@@ -39,18 +39,23 @@ export default {
   },
   watch: {
     active (val) {
-      this.isActive = val
-      
       if (val) {
         // Emit event when tab is selected
-        this.$emit('onSelect', this.id)
+        this.select()
+      } else {
+        this.unSelect()
       }
+    }
+  },
+  methods: {
+    select() {
+      console.log('select()', this.id)
+      this.isActive = true
+      this.$emit('onSelect', this.id)
     },
-    isActive (val) {
-      if (val) {
-        // Emit event when tab is selected
-        this.$emit('onSelect', this.id)
-      }
+    unSelect() {
+      console.log('unSelect()', this.id)
+      this.isActive = false
     }
   },
   created () {

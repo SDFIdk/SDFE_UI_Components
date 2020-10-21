@@ -7,7 +7,7 @@
           :key="`${ id }_item_${ index }`"
           class="ui-tabs__btn"
           :class="{ 'is-active': item.isActive }"
-          @click="onSelect(item)"
+          @click="onClick(item)"
         >
           {{ item.title }}
         </button>
@@ -54,17 +54,20 @@ export default {
     componentHasSlotContent (tabComponent) {
       return !!tabComponent.$slots.default
     },
-    onSelect (item) {
-      if (item === this.currentItem) {
+    onClick (clickedItem) {
+      if (clickedItem === this.currentItem) {
         return
       }
 
-      if (this.currentItem) {
-        this.currentItem.isActive = false
-      }
+      this.items.forEach(item => {
+        if (clickedItem === item) {
+          item.select()
+        } else {
+          item.unSelect()
+        }
+      })
 
-      this.currentItem = item
-      this.currentItem.isActive = true
+      this.currentItem = clickedItem
 
       this.hasTabContent = this.componentHasSlotContent(this.currentItem)
     }

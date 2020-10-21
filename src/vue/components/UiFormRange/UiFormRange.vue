@@ -116,7 +116,11 @@ export default {
     },
     setTipText (value) {
       const currentIndex = value - 1
-      this.tiptext = this.options.find((option, index) => index === currentIndex).label
+      const currentOption = this.options.find((option, index) => index === currentIndex)
+
+      if (currentOption) {
+        this.tiptext = currentOption.label
+      }
     }
   }
 }

@@ -24,6 +24,7 @@ export default {
   },
   data () {
     return {
+      // This value is manipulated from the parent component
       isActive: false
     }
   },
@@ -37,6 +38,14 @@ export default {
     }
   },
   watch: {
+    active (val) {
+      this.isActive = val
+      
+      if (val) {
+        // Emit event when tab is selected
+        this.$emit('onSelect', this.id)
+      }
+    },
     isActive (val) {
       if (val) {
         // Emit event when tab is selected

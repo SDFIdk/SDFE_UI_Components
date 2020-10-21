@@ -54,7 +54,6 @@ export default {
       validator (options) {
         let isValid = true
         options.forEach(option => {
-          console.log()
           if (typeof (option) !== 'object') {
             isValid = false
           }

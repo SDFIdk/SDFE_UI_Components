@@ -24,3 +24,11 @@
   <UiTabsItem key="tab4" title="Empty tab"></UiTabsItem>
 </UiTabs>
 ```
+
+## Reactive tabs
+
+<div class="custom"> 
+  <Example_UiTabs />
+</div>
+
+<<< @/docs/.vuepress/components/Example_UiTabs.vue

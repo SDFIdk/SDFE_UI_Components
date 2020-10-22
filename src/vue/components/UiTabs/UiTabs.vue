@@ -7,7 +7,7 @@
           :key="`${ id }_item_${ index }`"
           class="ui-tabs__btn"
           :class="{ 'is-active': item.isActive }"
-          @click="onSelect(item)"
+          @click="onClick(item)"
         >
           {{ item.title }}
         </button>
@@ -42,7 +42,7 @@ export default {
       // Set the fist tab to active if none predefined
       if (!this.currentItem && this.items.length > 0) {
         this.currentItem = this.items[0]
-        this.currentItem.isActive = true
+        this.currentItem.select()
       }
 
       if (this.currentItem) {
@@ -52,19 +52,18 @@ export default {
   },
   methods: {
     componentHasSlotContent (tabComponent) {
-      return !!tabComponent.$slots.default
+      return tabComponent && !!tabComponent.$slots.default
     },
-    onSelect (item) {
-      if (item === this.currentItem) {
-        return
-      }
+    onClick (clickedItem) {
+      this.items.forEach(item => {
+        if (clickedItem === item) {
+          item.select()
+        } else {
+          item.unSelect()
+        }
+      })
 
-      if (this.currentItem) {
-        this.currentItem.isActive = false
-      }
-
-      this.currentItem = item
-      this.currentItem.isActive = true
+      this.currentItem = clickedItem
 
       this.hasTabContent = this.componentHasSlotContent(this.currentItem)
     }

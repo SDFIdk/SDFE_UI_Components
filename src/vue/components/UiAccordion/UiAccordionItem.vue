@@ -5,7 +5,7 @@
   >
     <button
       class="ui-accordion__btn"
-      @click="onSelect"
+      @click="onClick"
     >
       {{ title }}
     </button>
@@ -40,20 +40,43 @@ export default {
       return this.$vnode.key || `UiAccordionItem_${this._uid}`
     }
   },
+  watch: {
+    active (val) {
+      if (val) {
+        // Emit event when tab is selected
+        this.select()
+      } else {
+        this.unSelect()
+      }
+    }
+  },
   created () {
     this.isActive = this.active
 
     this.$parent.$on('onItemSelect', this.onItemSelect)
   },
   methods: {
-    onSelect () {
+    select () {
+      this.isActive = true
       // Internal event for selecting active item
       this.$parent.$emit('onItemSelect', this.id)
       // Emit event for use in implementation
       this.$parent.$emit('onSelect', this.id)
     },
+    unSelect () {
+      this.isActive = false
+    },
+    onClick () {
+      if (this.isActive) {
+        this.unSelect()
+      } else {
+        this.select()
+      }
+    },
     onItemSelect (id) {
-      this.isActive = (id === this.id)
+      if (id !== this.id) {
+        this.unSelect()
+      }
     }
   }
 }

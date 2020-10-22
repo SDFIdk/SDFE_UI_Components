@@ -47,17 +47,17 @@ export default {
       }
     }
   },
+  created () {
+    this.isActive = this.active
+  },
   methods: {
-    select() {
+    select () {
       this.isActive = true
       this.$emit('onSelect', this.id)
     },
-    unSelect() {
+    unSelect () {
       this.isActive = false
     }
-  },
-  created () {
-    this.isActive = this.active
   }
 }
 </script>

@@ -40,11 +40,6 @@ export default {
       return this.$vnode.key || `UiAccordionItem_${this._uid}`
     }
   },
-  created () {
-    this.isActive = this.active
-
-    this.$parent.$on('onItemSelect', this.onItemSelect)
-  },
   watch: {
     active (val) {
       if (val) {
@@ -55,15 +50,20 @@ export default {
       }
     }
   },
+  created () {
+    this.isActive = this.active
+
+    this.$parent.$on('onItemSelect', this.onItemSelect)
+  },
   methods: {
-    select() {
+    select () {
       this.isActive = true
       // Internal event for selecting active item
       this.$parent.$emit('onItemSelect', this.id)
       // Emit event for use in implementation
       this.$parent.$emit('onSelect', this.id)
     },
-    unSelect() {
+    unSelect () {
       this.isActive = false
     },
     onClick () {

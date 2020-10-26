@@ -9,6 +9,20 @@ As a rule of thumb, form components work with the principle of props in, events 
 
 <<< @/docs/.vuepress/components/Example_UiFormCheckbox.vue
 
+## Checkbox with slot
+
+<div class="custom"> 
+  <UiFormCheckbox label="My checkbox">
+    <code>info</code>
+  </UiFormCheckbox>
+</div>
+
+```html
+<UiFormCheckbox label="My checkbox">
+  <code>info</code>
+</UiFormCheckbox>
+```
+
 ## Select dropdown
 
 <div class="custom"> 

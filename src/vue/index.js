@@ -1,6 +1,7 @@
 'use strict'
 
 import UiTest from './components/UiTest'
+import UiTransitionCollapse from './components/UiTransitionCollapse'
 import UiTabs from './components/UiTabs'
 import UiAccordion from './components/UiAccordion'
 import UiCard from './components/UiCard'
@@ -12,6 +13,7 @@ import '../styl/main.styl'
 export default {
   install (Vue, options) {
     Vue.use(UiTest)
+    Vue.use(UiTransitionCollapse)
     Vue.use(UiTabs)
     Vue.use(UiAccordion)
     Vue.use(UiCard)

@@ -16,6 +16,7 @@
   color $text-body
   cursor pointer
   background-color $accordion-bg-secondary
+  transition background-color 0.25s ease
 
   .ui-accordion__item:first-child > &
     border-top none
@@ -26,7 +27,3 @@
 
 .ui-accordion__body
   padding 0 10px 15px 10px
-  display none
-
-  .ui-accordion__item.is-active > &
-    display block

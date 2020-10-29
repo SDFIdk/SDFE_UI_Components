@@ -9,9 +9,13 @@
     >
       {{ title }}
     </button>
-    <div class="ui-accordion__body">
-      <slot />
-    </div>
+    <UiTransitionCollapse>
+      <div v-if="isActive">
+        <div class="ui-accordion__body">
+          <slot />
+        </div>
+      </div>
+    </UiTransitionCollapse>
   </div>
 </template>
 

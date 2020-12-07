@@ -14,7 +14,7 @@
       </nav>
     </div>
     <div
-      v-if="hasTabContent"
+      v-show="hasTabContent"
       class="ui-tabs__body"
     >
       <slot />

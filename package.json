@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "sanitize.css": "12.0.1",
-    "vue-svg-inline-loader": "1.5.0"
+    "vue-svg-inline-loader": "^2.1.5"
   },
   "devDependencies": {
     "@vue/cli": "4.4.6",

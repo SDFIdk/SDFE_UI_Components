@@ -1,4 +1,7 @@
-# SDFE_UI_Components
+# [DEPRECATED] SDFE_UI_Components
+
+![Maintenance](https://img.shields.io/maintenance/No/2023?color=red)
+
 UI library for CSS and Vue components, published as npm packages for use across projects
 
 ## Use UI Components in a project

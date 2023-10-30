@@ -2,6 +2,8 @@
 
 ![Maintenance](https://img.shields.io/maintenance/No/2023?color=red)
 
+**This repo is no longer maintained. Use [SDFI design system](https://github.com/sdFIdk/design-system-css/) in stead.**
+
 UI library for CSS and Vue components, published as npm packages for use across projects
 
 ## Use UI Components in a project
